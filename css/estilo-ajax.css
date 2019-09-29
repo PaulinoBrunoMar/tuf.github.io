@@ -76,9 +76,7 @@ h1{
 }
 
 .ajax-escudo{
-	height: 190px;
 	width: 20%;
-
 }
 
 body{
@@ -129,9 +127,9 @@ section{
   font-size: 20px;
   background-color: white;
   color: rgb(210, 18, 46, 0.9);
-  margin-top: -70px;
-  margin-right: 45px;
-  width: 620px;
+  margin-top: -150px;
+  margin-right: 5px; 
+  width: 60%;
   border: 2px solid rgb(210, 18, 46, 0.9);
 }
 
@@ -141,9 +139,8 @@ section{
   background-color: white;
   color: rgb(210, 18, 46, 0.9);
   padding: 20px;
-  margin-top: 10px;
-  margin-right: 15px;
-  width: 220px;
+  margin-right: 5px;  
+  width: 25%;
   float: right;
   border: 2px solid rgb(210, 18, 46, 0.9);
 }
