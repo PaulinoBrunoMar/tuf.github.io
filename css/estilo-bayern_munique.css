@@ -78,7 +78,6 @@ h1{
 }
 
 .bayern_munique-escudo{
-	margin-left: -15px;
 	width: 20%;
 
 }
@@ -131,7 +130,7 @@ section{
   font-size: 20px;
   background-color: white;
   color: rgb(210, 18, 46, 0.9);
-  margin-top: -150px;
+  margin-top: -90px;
   margin-right: 5px;
   width: 60%;
   border: 2px solid rgb(210, 18, 46, 0.9);

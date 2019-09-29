@@ -162,7 +162,7 @@ footer{
 }
 
 #jgrupo{
-	margin-left: 24%;
+	margin-left: 20%;
 	width: 350px;
 	height: 495px;
 	
@@ -172,16 +172,15 @@ footer{
 }
 
 #aside{
-	margin-left: 19%;
 }
 
 #jmata{
-	width: 430px;
+	width: 70%;
 	height: 200px;
 }
 
 .dados{
-	width: 430px;
+	width: 70%;
 	height: 85px;
 	margin-top: 10px;
 }
