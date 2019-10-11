@@ -1,4 +1,4 @@
-/*Página Milan*/
+/*Página Juventus*/
 
 table {
   width:100%;
@@ -45,19 +45,19 @@ th, td {
 }
 
 tr:hover td {
-  color: rgb(153, 0, 0, 0.9);
+  color: white;
   background-color: black;
 }
 
 
-table#milan-table tr {
+table#juventus-table tr {
   background-color: white;
   color: black;
 }
 
-table#milan-table th {
+table#juventus-table th {
   background-color: gray;
-  color: rgb(153, 0, 0, 0.9);
+  color: white;
 }
 
 header{
@@ -71,14 +71,14 @@ header{
 h1{
 	margin-bottom: 1%;
 	font-family: sce;
-	color: rgb(153, 0, 0, 0.9);
+	color: white;
 	font-size: 40px;
 	width: 100%;
 	background-color: rgb(0, 0, 0, 0.8);
 }
 
-.milan-escudo{
-	width: 14%;
+.juventus-escudo{
+	width: 10%;
 
 }
 
@@ -89,7 +89,7 @@ body{
 	background-repeat: no-repeat;
 	width: 87%;
 	margin: auto;
-	color: rgb(153, 0, 0, 0.9);
+	color: white;
 	font-family: Consolas;
 }
 
@@ -102,18 +102,18 @@ nav{
 	padding-top: 20px;
 }
 
-.milan-menu{
+.juventus-menu{
 	padding: 1%;
 	margin: 1%;
 	text-decoration: none;
-	color: rgb(153, 0, 0, 0.9);
+	color: black;
 	font-weight: bold;
 	background-color: white;
 	box-shadow:0px 5px 10px gray;
 	font-family: helvetica;
 }
 
-.milan-menu:hover{
+.juventus-menu:hover{
 	background-color: rgb(20, 85, 229);
 	color: white;
 }
@@ -129,29 +129,29 @@ section{
   font-weight: bold;
   font-size: 20px;
   background-color: white;
-  color: rgb(153, 0, 0, 0.9);
+  color: black;
   margin-top: -90px;
   margin-right: 5px;
   width: 60%;
-  border: 2px solid rgb(153, 0, 0, 0.9);
+  border: 2px solid white;
 }
 
 .lateral{
   font-weight: bold;
   font-size: 15px;
   background-color: white;
-  color: rgb(153, 0, 0, 0.9);;
+  color: black;;
   padding: 20px;
   margin-right: 5px;
   width: 25%;
   float: right;
-  border: 2px solid rgb(153, 0, 0, 0.9);
+  border: 2px solid white;
 }
 
 h2{
   font-weight: bold;
   background-color: white;
-  color: rgb(153, 0, 0, 0.9);
+  color: black;
   padding: 20px;
   margin-top: 20px;
   width: 260px;
@@ -161,7 +161,7 @@ h2{
 h3{
   font-weight: bold;
   background-color: white;
-  color: rgb(153, 0, 0, 0.9);
+  color: black;
   padding: 15px;
   margin-top: 15px;
   width: 260px;
@@ -182,7 +182,7 @@ footer{
 	background-color: rgb(0, 0, 0, 0.9);
 	margin-top: 8px;
 	height: 20px;
-	color: rgb(153, 0, 0, 0.9);
+	color: white;
 	font-weight: bold;
 	text-align: center;
 }
