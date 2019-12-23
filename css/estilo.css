@@ -62,7 +62,7 @@ nav{
 }
 
 .menu:hover{
-	background-color: rgb(20, 85, 229);
+	background-color: rgb(252, 84, 97);
 	color: white;
 }
 
@@ -99,6 +99,7 @@ h2{
 	border-radius: 20px;
 	border: 5px solid  rgb(87, 194, 221, 0.9);
 	margin-bottom: 20px;
+	opacity : 0.9;
 }
 
 footer{
@@ -125,7 +126,7 @@ footer{
 }
 
 .torneio:hover{
-	background-color: rgb(20, 85, 229);
+	background-color: rgb(252, 84, 97);
 	color: white;
 }
 
