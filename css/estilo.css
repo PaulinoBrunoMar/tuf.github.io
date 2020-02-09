@@ -97,7 +97,7 @@ h2{
 
 #imgCorpo{
 	border-radius: 20px;
-	border: 5px solid  rgb(87, 194, 221, 0.9);
+	border: 5px solid  rgb(0, 104, 168, 0.9);
 	margin-bottom: 20px;
 	opacity : 0.9;
 }
@@ -158,7 +158,7 @@ footer{
 #topo{
 	width: 75%;
 	height: 250px;
-	margin-left: 6%;
+	margin-left: -8%;
 	position: absolute;
 }
 
@@ -173,6 +173,7 @@ footer{
 }
 
 #jmata{
+	margin-left: 8%;
 	width: 70%;
 	height: 200px;
 }
@@ -181,4 +182,5 @@ footer{
 	width: 70%;
 	height: 85px;
 	margin-top: 10px;
+	margin-left: 8%;
 }

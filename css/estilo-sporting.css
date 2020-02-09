@@ -1,4 +1,4 @@
-/*Página Juventus*/
+/*Página sporting*/
 
 table {
   width:100%;
@@ -46,16 +46,16 @@ th, td {
 
 tr:hover td {
   color: white;
-  background-color: black;
+  background-color: rgb(24,110, 69, 0.9);
 }
 
 
-table#juventus-table tr {
+table#sporting-table tr {
   background-color: white;
   color: black;
 }
 
-table#juventus-table th {
+table#sporting-table th {
   background-color: gray;
   color: white;
 }
@@ -74,10 +74,10 @@ h1{
 	color: white;
 	font-size: 40px;
 	width: 100%;
-	background-color: rgb(0, 0, 0, 0.8);
+	background-color: rgb(24,110, 69, 0.9);
 }
 
-.juventus-escudo{
+.sporting-escudo{
 	width: 10%;
 
 }
@@ -95,14 +95,14 @@ body{
 
 nav{
 	text-align: center;
-	background-color: rgb(0, 0, 0, 0.9);
+	background-color: rgb(24,110, 69, 0.9);
 	margin-top: 5px;
 	margin-bottom: 5px; 
 	height: 40px;
 	padding-top: 20px;
 }
 
-.juventus-menu{
+.sporting-menu{
 	padding: 1%;
 	margin: 1%;
 	text-decoration: none;
@@ -113,13 +113,13 @@ nav{
 	font-family: helvetica;
 }
 
-.juventus-menu:hover{
+.sporting-menu:hover{
 	background-color: rgb(20, 85, 229);
 	color: white;
 }
 
 section{
-	background-color: rgb(0, 0, 0, 0.9);
+	background-color: rgb(24,110, 69, 0.9);
 	height: 100%;
 	display: flex;
 }
@@ -179,7 +179,7 @@ h3{
 }
 
 footer{
-	background-color: rgb(0, 0, 0, 0.9);
+	background-color: rgb(24,110, 69, 0.9);
 	margin-top: 8px;
 	height: 20px;
 	color: white;
