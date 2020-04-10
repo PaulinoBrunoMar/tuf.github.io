@@ -1,63 +1,48 @@
 /*Página B. Leverkusen*/
+*{
+	border-radius: 2px;
+}
 
 table {
-  width:100%;
-  font-family: sce;
-  margin-left: 2px;
-  margin-top: 2px;
-  margin-bottom: 2px;
+	width:100%;
+	font-family: sce;
+	margin-left: 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
 table, th, td {
-  border: 1px solid rgb(195, 195, 195);
-  border-collapse: collapse;
+	border: 1px solid rgb(195, 195, 195);
+	border-collapse: collapse;
 }
 th, td {
-  padding: 15px;
-  text-align: center;
-}
-
-.a{
-	text-align: start;
-}
-
-.ATA{
+	padding: 15px;
 	text-align: center;
-	color: rgb(183, 0, 0);
-	font-weight: bold;
 }
 
-.MEI{
+.POS{
 	text-align: center;
-	color: rgb(0, 128, 0);
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
-.DEF{
-	text-align: center;
-	color: rgb(35, 43, 133);
-	font-weight: bold;
+.linhas:hover {
+	color: red;
+	background-color: black;
 }
 
-.GK{
-	text-align: center;
-	color: rgb(128, 128, 0);
-	font-weight: bold;
+.coluna:hover{
+	color: red;
+	background-color: black;
 }
 
-tr:hover td {
-  color: red;
-  background-color: black;
+tr {
+	background-color: white;
+	color: black;
 }
 
-
-table#leverkusen-table tr {
-  background-color: white;
-  color: black;
-}
-
-table#leverkusen-table th {
-  background-color: gray;
-  color: red;
+th {
+	background-color: black;
+	color: red;
 }
 
 header{
@@ -78,8 +63,11 @@ h1{
 }
 
 .leverkusen-escudo{
-	width: 25%;
-
+	margin-left: 2%;
+	margin-top: 2%;
+	width: 150px;
+	float: left;
+	position: relative;
 }
 
 body{
@@ -114,8 +102,7 @@ nav{
 }
 
 .leverkusen-menu:hover{
-	background-color: rgb(20, 85, 229);
-	color: white;
+	background-color: black;
 }
 
 section{
@@ -125,58 +112,62 @@ section{
 }
 
 .KDA{
-  float: right;
-  font-weight: bold;
-  font-size: 20px;
-  background-color: white;
-  color: rgb(239, 1, 7, 0.9);
-  margin-top: -130px;
-  margin-right: 5px;
-  width: 60%;
-  border: 2px solid rgb(239, 1, 7, 0.9);
+	float: right;
+	color: red;
+	margin-top: 35px;
+	margin-right: 5px;
+	width: 60%;
+	border: 2px solid red;
+	position: relative;
 }
 
-.lateral{
-  font-weight: bold;
-  font-size: 15px;
-  background-color: white;
-  color: red;
-  padding: 20px;
-  margin-right: 5px;
-  width: 25%;
-  float: right;
-  border: 2px solid rgb(239, 1, 7, 0.9);
+.qntdMoedas{
+	font-weight: bold;
+	font-size: 15px;
+	background-color: black;
+	color: red;
+	padding: 10px;
+	margin-right: 5px;
+	width: 25%;
+	float: right;
+	border: 2px solid red;
 }
 
 h2{
-  font-weight: bold;
-  background-color: white;
-  color: red;
-  padding: 20px;
-  margin-top: 20px;
-  width: 260px;
-  margin-left: 80px;
-}
-
-h3{
-  font-weight: bold;
-  background-color: white;
-  color: red;
-  padding: 15px;
-  margin-top: 15px;
-  width: 260px;
-  margin-left: 80px;
+	font-weight: bold;
+	background-color: black;
+	color: red;
+	padding: 20px;
+	margin-top: 20px;
+	width: 260px;
+	margin-left: 80px;
+	border: 3px solid red;
 }
 
 .squad{
-	width: 80%;
-	
+	width: 90%;
+	padding: 3px;
+	border: 3px solid red;	
 }
 
-.destaque, .squad{
-	border: 3px solid white;
-	margin-left: 80px;
+.destaque{
+	font-weight: bold;
+	font-size: 15px;
+	background-color: black;
+	width: 40%;
+	color: rgb(239, 1, 7, 0.9);
+	padding: 10px;
+	border: 3px solid red;
 }
+.destaque-img{
+	font-weight: bold;
+	font-size: 15px;
+	width: 90%;
+	color: rgb(239, 1, 7, 0.9);
+	padding: 3px;
+	border: 3px solid red;
+}
+
 
 footer{
 	background-color: rgb(0, 0, 0, 0.9);

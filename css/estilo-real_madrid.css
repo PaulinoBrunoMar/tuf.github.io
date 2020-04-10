@@ -1,4 +1,8 @@
 /*Página Real_Madrid*/
+*{
+	border-radius: 2px;
+}
+
 
 table {
   width:100%;
@@ -16,48 +20,30 @@ th, td {
   text-align: center;
 }
 
-.a{
-	text-align: start;
-}
-
-.ATA{
+.POS{
 	text-align: center;
-	color: rgb(183, 0, 0);
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
-.MEI{
-	text-align: center;
-	color: rgb(0, 128, 0);
-	font-weight: bold;
+.linhas:hover {
+	color: white;
+	background-color: black;
 }
 
-.DEF{
-	text-align: center;
-	color: rgb(35, 43, 133);
-	font-weight: bold;
+.coluna:hover{
+	color: white;
+	background-color: black;
 }
 
-.GK{
-	text-align: center;
-	color: rgb(128, 128, 0);
-	font-weight: bold;
-}
-
-tr:hover td {
-  color: white;
-  background-color: black;
-}
-
-
-table#real_madrid-table tr {
+tr {
   background-color: white;
   color: black;
 }
 
-table#real_madrid-table th {
-  background-color: gray;
-  color: black;
+th {
+  background-color: black;
+  color: white;
 }
 
 header{
@@ -78,7 +64,11 @@ h1{
 }
 
 .real_madrid-escudo{
-	width: 14%;
+	margin-left: 2%;
+	margin-top: 2%;
+	width: 150px;
+	float: left;
+	position: relative;
 }
 
 body{
@@ -113,7 +103,7 @@ nav{
 }
 
 .real_madrid-menu:hover{
-	background-color: rgb(20, 85, 229);
+	background-color: black;
 	color: white;
 }
 
@@ -125,26 +115,24 @@ section{
 
 .KDA{
   float: right;
-  font-weight: bold;
-  font-size: 20px;
-  background-color: white;
-  color: rgb(210, 18, 46, 0.9);
-  margin-top: -90px;
+  color: black;
+  margin-top: 35px;
   margin-right: 5px;
   width: 60%;
   border: 2px solid black;
+  position: relative;
 }
 
-.lateral{
-  font-weight: bold;
-  font-size: 15px;
-  background-color: white;
-  color: black;
-  padding: 20px;
-  margin-right: 5px;
-  width: 25%;
-  float: right;
-  border: 2px solid black;
+.qntdMoedas{
+	font-weight: bold;
+	font-size: 15px;
+	background-color: white;
+	color: black;
+	padding: 10px;
+	margin-right: 5px;
+	width: 25%;
+	float: right;
+	border: 2px solid black;
 }
 
 h2{
@@ -155,25 +143,30 @@ h2{
   margin-top: 20px;
   width: 260px;
   margin-left: 80px;
-}
-
-h3{
-  font-weight: bold;
-  background-color: white;
-  color: black;
-  padding: 15px;
-  margin-top: 15px;
-  width: 260px;
-  margin-left: 80px;
+  border: 3px solid black;
 }
 
 .squad{
-	width: 80%;
+	width: 90%;
+	padding: 3px;
+	border: 3px solid black;
 }
 
-.destaque, .squad{
+.destaque{
 	border: 3px solid black;
-	margin-left: 80px;
+	font-weight: bold;
+	font-size: 15px;
+	width: 40%;
+	color: black;
+	padding: 10px;
+}
+.destaque-img{
+	border: 3px solid black;
+	font-weight: bold;
+	font-size: 15px;
+	width: 90%;
+	padding: 3px;
+	background-color: white;
 }
 
 footer{

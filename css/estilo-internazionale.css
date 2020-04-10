@@ -1,61 +1,47 @@
 /*Página Internazionale*/
+*{
+	border-radius: 2px;
+}
 
 table {
-  width: 100%;
-  font-family: sce;
-  margin-left: 2px;
-  margin-top: 2px;
-  margin-bottom: 2px;
+	width: 100%;
+	font-family: sce;
+	margin-left: 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
 table, th, td {
-  border: 1px solid rgb(195, 195, 195);
-  border-collapse: collapse;
+	border: 1px solid rgb(195, 195, 195);
+	border-collapse: collapse;
 }
 th, td {
-  padding: 15px;
-  text-align: center;
-}
-.a{
-	text-align: start;
-}
-
-.ATA{
+	padding: 15px;
 	text-align: center;
-	color: rgb(183, 0, 0);
-	font-weight: bold;
 }
-
-.MEI{
+.POS{
 	text-align: center;
-	color: rgb(0, 128, 0);
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
-.DEF{
-	text-align: center;
-	color: rgb(35, 43, 133);
-	font-weight: bold;
+.linhas:hover {
+	color: white;
+	background-color: rgb(0, 104, 168, 0.9);
 }
 
-.GK{
-	text-align: center;
-	color: rgb(128, 128, 0);
-	font-weight: bold;
-}
-tr:hover td {
-  color: black;
-  background-color: rgb(0, 104, 168);
+.coluna:hover{
+	color: white;
+	background-color: rgb(0, 104, 168, 0.9);
 }
 
-
-table#internazionale-table tr {
-  background-color: white;
-  color: black;
+tr {
+	background-color: white;
+	color: black;
 }
 
-table#internazionale-table th {
-  background-color: gray;
-  color: black;
+th {
+	background-color: rgb(0, 104, 168, 0.9);
+	color: black;
 }
 
 header{
@@ -76,7 +62,11 @@ h1{
 }
 
 .internazionale-escudo{
-	width: 20%;
+	margin-left: 2%;
+	margin-top: 2%;
+	width: 150px;
+	float: left;
+	position: relative;
 }
 
 body{
@@ -111,8 +101,7 @@ nav{
 }
 
 .internazionale-menu:hover{
-	background-color: rgb(20, 85, 229);
-	color: white;
+	background-color: rgb(0, 104, 168, 0.9);
 }
 
 section{
@@ -122,58 +111,60 @@ section{
 }
 
 .KDA{
-  float: right;
-  font-weight: bold;
-  font-size: 20px;
-  background-color: white;
-  color: black;
-  margin-top: -150px;
-  margin-right: 5px; 
-  width: 60%;
-  border: 2px solid rgb(0, 104, 168, 0.9);
+	float: right;
+	color: black;
+	margin-top: 35px;
+	margin-right: 5px; 
+	width: 60%;
+	border: 2px solid black;
+	position: relative;
 }
 
-.lateral{
-  font-weight: bold;
-  font-size: 15px;
-  background-color: white;
-  color: black;
-  padding: 20px;
-  margin-right: 5px;  
-  width: 25%;
-  float: right;
-  border: 2px solid rgb(0, 104, 168, 0.9);
+.qntdMoedas{
+	font-weight: bold;
+	font-size: 15px;
+	background-color: rgb(0, 104, 168, 0.9);
+	color: black;
+	padding: 10px;
+	margin-right: 5px;
+	width: 25%;
+	float: right;
+	border: 2px solid black;
 }
 
 h2{
-  font-weight: bold;
-  background-color: white;
-  color: black;
-  padding: 20px;
-  margin-top: 20px;
-  width: 260px;
-  margin-left: 80px;
-}
-
-h3{
-  font-weight: bold;
-  background-color: white;
-  color: black;
-  padding: 15px;
-  margin-top: 15px;
-  width: 260px;
-  margin-left: 80px;
+	font-weight: bold;
+	background-color: rgb(0, 104, 168, 0.9);
+	color: black;
+	padding: 20px;
+	margin-top: 20px;
+	width: 260px;
+	margin-left: 80px;
+	border: 3px solid black;
 }
 
 .squad{
-	width: 80%;
+	width: 90%;
+	padding: 3px;
+	border: 3px solid black;
 }
 
-.destaque, .squad{
-	border: 3px solid white;
-	margin-left: 80px;
+.destaque{
+	border: 3px solid black;
+	font-weight: bold;
+	font-size: 15px;
+	background-color: rgb(0, 104, 168, 0.9);
+	width: 40%;
+	color: black;
+	padding: 10px;
 }
-
+.destaque-img{
+	border: 3px solid black;
+	font-weight: bold;
+	font-size: 15px;
+	width: 90%;
+	padding: 3px;
+}
 
 footer{
 	background-color: rgb(0, 104, 168, 0.9);

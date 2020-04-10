@@ -7,6 +7,137 @@
 	<meta name="descripition" content="SuperCopa Calango">
 	<link rel= "stylesheet" href= "../../css/estilo-bayern_munique.css">
 	<link rel="shortcut icon" href="../../Assets/favicon.ico">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+
+	<script>
+			$(document).ready(function() {
+
+				var firestore = firebase.firestore();
+				var cont = 1;
+
+				firestore.collection("Jogadores").doc("Bayern").collection("DadosJogadores").orderBy("Setor").orderBy("Posição", "desc").get().then(function(querySnapshot) {
+					querySnapshot.forEach(function(doc) {
+						const myData = doc.data();
+
+						var tabela = document.getElementById("bayern_munique-table");
+						var total = document.getElementById("cont");
+
+						var tr = document.createElement("tr");
+						var tdPos = document.createElement("td");
+						var tdNome = document.createElement("td");
+						var tdGols = document.createElement("td");
+						var tdAssist = document.createElement("td");
+
+
+						tdPos.setAttribute("class", "POS");
+						tr.setAttribute("class", "linhas");
+
+						tdPos.innerText = myData.Posição;
+						tdNome.innerText = myData.Nome;
+						tdGols.innerText = myData.Gols;
+						tdAssist.innerText = myData.Assistências;
+						total.innerText = ("Quantidade de jogadores: " + cont);
+
+						tr.appendChild(tdPos);
+						tr.appendChild(tdNome);
+						tr.appendChild(tdGols);
+						tr.appendChild(tdAssist);
+						tabela.appendChild(tr);
+
+						cont++;
+					});
+				});
+
+				firestore.collection("Clube").doc("Bayern").get().then(function(doc) {
+					if (doc.exists) {
+						const myData = doc.data();
+
+						var moedas = document.getElementById("moedas");
+
+						moedas.innerText = ("Valor em Carteira: " + myData.Moedas);
+
+
+					} else {
+        		// doc.data() will be undefined in this case
+        		console.log("No such document!");
+        	}
+        }).catch(function(error) {
+        	console.log("Error getting document:", error);
+        });
+
+        firestore.collection("Clube").doc("Bayern").get().then(function(doc) {
+        	if (doc.exists) {
+        		const myData = doc.data();
+
+        		var jogos = document.getElementById("jogos");
+        		var vitorias = document.getElementById("vitorias");
+        		var empates = document.getElementById("empates");
+        		var derrotas = document.getElementById("derrotas");
+        		var golsPro = document.getElementById("golsPro");
+        		var golsContra = document.getElementById("golsContra");
+
+        		jogos.innerText = myData.Jogos;
+        		vitorias.innerText = myData.Vitórias;
+        		empates.innerText =  myData.Empates;
+        		derrotas.innerText =  myData.Derrotas;
+        		golsPro.innerText = myData.GolsPró;
+        		golsContra.innerText = myData.GolsContra;
+
+        	} else {
+        		// doc.data() will be undefined in this case
+        		console.log("No such document!");
+        	}
+        }).catch(function(error) {
+        	console.log("Error getting document:", error);
+        });
+
+        firestore.collection("Clube").doc("Bayern").get().then(function(doc) {
+        	if (doc.exists) {
+        		const myData = doc.data();
+
+        		var escalacaoImg = myData.Escalação;
+        		document.getElementById("escalacaoImg").src = [escalacaoImg];
+
+        		var craqueImg = myData.CraqueImg;
+        		document.getElementById("craqueImg").src = [craqueImg];
+
+        		var artilheiroImg = myData.ArtilheiroImg;
+        		document.getElementById("artilheiroImg").src = [artilheiroImg];        		
+
+        	} else {
+        		// doc.data() will be undefined in this case
+        		console.log("No such document!");
+        	}
+        }).catch(function(error) {
+        	console.log("Error getting document:", error);
+        });
+
+
+        firestore.collection("Jogadores").doc("Bayern").collection("DadosJogadores").orderBy("Gols", "desc").limit(1).get().then(function(querySnapshot) {
+        	querySnapshot.forEach(function(doc) {
+        		const myData = doc.data();
+
+        		var gols = document.getElementById("artilheiroH3");
+
+        		gols.innerText = ("Artilheiro" + " " + "(" + myData.Gols + " " + "Gols" + ")");
+
+
+        		cont++;
+        	});
+        });
+
+    });
+
+</script>
 </head>
 <body>
 	<header> 
@@ -17,15 +148,28 @@
 
 			<img class="bayern_munique-escudo" src="../../Assets/Escudos/Bayern_Munique.png" alt="Escudo bayern_munique" align=”middle”>
 
-			<h3 class="lateral">
-				Valor em carteira: 2 c
-			</h3>
+			<h3 id="moedas" class="qntdMoedas"></h3>
 
-			<h3 class="lateral">
-				Classificação geral: 5º
-			</h3>
-			
-			<img class="KDA" src="../../Assets/KDA/munique-kda.png" alt="KDA munique">
+			<h3 id="cont" alt="Quantidade de jogadores" class="qntdMoedas"></h3>
+
+			<table id="kda" class="KDA">
+				<tr>
+					<th>Jogos</th>
+					<th>Vitórias</th>
+					<th>Empates</th>
+					<th>Derrotas</th>
+					<th>Gols Pró</th>
+					<th>Gols Contra</th>
+				</tr>
+				<tr>
+					<td id="jogos" class="coluna"></td>
+					<td id="vitorias" class="coluna"></td>
+					<td id="empates" class="coluna"></td>
+					<td id="derrotas" class="coluna"></td>
+					<td id="golsPro" class="coluna"></td>
+					<td id="golsContra" class="coluna"></td>
+				</tr>
+			</table>
 		</center>
 	</header>
 	<nav> 
@@ -34,7 +178,6 @@
 			<a class="bayern_munique-menu" href="../Torneio.html">Torneios</a>
 			<a class="bayern_munique-menu" href="../Artilharia.html">Artilharia</a>
 			<a class="bayern_munique-menu" href="../Assistencias.html">Assistências</a>
-			<a class="bayern_munique-menu" href="../Melhor_jogador.html">Melhores Jogadores</a>
 			<a class="bayern_munique-menu" href="../Classificacao.html">Classificação Geral</a>
 		</center>
 	</nav>
@@ -46,150 +189,6 @@
 				<th>Gols</th> 
 				<th>Passes</th>
 			</tr>
-			<tr>
-				<td class="ATA" >ATAQUE</td>
-				<td class="a">Benedetto</td>
-				<td>3</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="ATA" >ATAQUE</td>
-				<td class="a">Mbappe</td>
-				<td>11</td>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td class="ATA" >ATAQUE</td>
-				<td class="a">Muriel</td>
-				<td>1</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Lanzini</td>
-				<td>0</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Ivan Rakitic</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Lucas Moura</td>
-				<td>1</td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Depay</td>
-				<td>6</td>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Suaárez</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Kostic´</td>
-				<td>1</td>
-				<td>7</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Sissoko</td>
-				<td>0</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Hulk</td>
-				<td>1</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Diaby</td>
-				<td>2</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Kluivert</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Marcone</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Winks</td>
-				<td>0</td>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Antunes</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Bailly</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Smalling</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Danilo</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Halstenberg</td>
-				<td>0</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Kevin Mbabu</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Sidnei</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="GK" >GOLEIROS</td>
-				<td class="a">Mattia Perin</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="GK" >GOLEIROS</td>
-				<td class="a">Ulreich</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
 		</table>
 
 		<aside>
@@ -199,22 +198,21 @@
 				</h2>
 
 				<aside>
-					<a href="https://wefut.com/squad/17707647" target="_blank">
-						<img class="squad" src="http://wefut.com/squads/image/17707647/3">
+					<a href="https://sofifa.com/squad/595944" target="_blank">
+						<img id="escalacaoImg" class="squad" src="">
 					</a>
-						
+
 				</aside>
 
-				<aside>
-					<h3>
-						Craque da equipe
-					</h3>
-					<img class="destaque" src="../../Assets/Squads/bayern-craque.png">
-					<h3>
-						Artilheiro (11 Gol)
-					</h3>
-					<img class="destaque" src="../../Assets/Squads/bayern-artilheiro.png">
+				<aside>					
+					<h3 class="destaque">Craque da equipe</h3>
+					<img id="craqueImg" class="destaque-img" src="g">
+
+					<h3 id="artilheiroH3" class="destaque"></h3 >
+					<img id="artilheiroImg" class="destaque-img" src="">
 				</aside>						
+			</center>
+		</aside>				
 			</center>
 		</aside>
 
@@ -225,5 +223,6 @@
 			© Copyright 2019-2020 Bruno P.M 
 		</center>
 	</footer>
+	<script src="../../js/app.js"></script>
 </body>
 </html>

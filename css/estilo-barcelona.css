@@ -1,63 +1,47 @@
 /*Página Barcelona*/
+*{
+	border-radius: 2px;
+}
 
 table {
-  width:100%;
-  font-family: sce;
-  margin-left: 2px;
-  margin-top: 2px;
-  margin-bottom: 2px;
+	width:100%;
+	font-family: sce;
+	margin-left: 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
 table, th, td {
-  border: 1px solid rgb(195, 195, 195);
-  border-collapse: collapse;
+	border: 1px solid rgb(195, 195, 195);
+	border-collapse: collapse;
 }
 th, td {
-  padding: 15px;
-  text-align: center;
-}
-
-.a{
-	text-align: start;
-}
-
-.ATA{
+	padding: 15px;
 	text-align: center;
-	color: rgb(183, 0, 0);
-	font-weight: bold;
 }
-
-.MEI{
+.POS{
 	text-align: center;
-	color: rgb(0, 128, 0);
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
-.DEF{
-	text-align: center;
-	color: rgb(35, 43, 133);
-	font-weight: bold;
+.linhas:hover {
+	color: white;
+	background-color: rgb(162, 33, 75);
 }
 
-.GK{
-	text-align: center;
-	color: rgb(128, 128, 0);
-	font-weight: bold;
+.coluna:hover{
+	color: white;
+	background-color: rgb(162, 33, 75);
 }
 
-tr:hover td {
-  color: white;
-  background-color: rgb(162, 33, 75);
+tr {
+	background-color: white;
+	color: rgb(0, 84, 159);
 }
 
-
-table#barcelona-table tr {
-  background-color: white;
-  color: rgb(0, 84, 159);
-}
-
-table#barcelona-table th {
-  background-color: gray;
-  color: rgb(0, 84, 159);
+th {
+	background-color: rgb(162, 33, 75);
+	color: rgb(0, 84, 159);
 }
 
 header{
@@ -78,8 +62,11 @@ h1{
 }
 
 .barcelona-escudo{
-	width: 20%;
-
+	margin-left: 2%;
+	margin-top: 2%;
+	width: 150px;
+	float: left;
+	position: relative;
 }
 
 body{
@@ -114,8 +101,7 @@ nav{
 }
 
 .barcelona-menu:hover{
-	background-color: rgb(20, 85, 229);
-	color: white;
+	background-color: rgb(162, 33, 75);
 }
 
 section{
@@ -125,57 +111,61 @@ section{
 }
 
 .KDA{
-  float: right;
-  font-weight: bold;
-  font-size: 20px;
-  background-color: white;
-  color: rgb(0, 84, 159);
-  margin-top: -140px;
-  margin-right: 5px;
-  width: 60%;
-  border: 2px solid rgb(0, 84, 159);
+	float: right;
+	color: rgb(0, 84, 159);
+	margin-top: 35px;
+	margin-right: 5px;
+	width: 60%;
+	border: 2px solid rgb(0, 84, 159);
+	position: relative;
 }
 
-.lateral{
-  font-weight: bold;
-  font-size: 15px;
-  background-color: white;
-  color: rgb(0, 84, 159);
-  padding: 20px;
-  margin-right: 5px;
-  width: 25%;
-  float: right;
-  border: 2px solid rgb(0, 84, 159);
+.qntdMoedas{
+	font-weight: bold;
+	font-size: 15px;
+	background-color: rgb(162, 33, 75, 0.9);
+	color: rgb(0, 84, 159);
+	padding: 10px;
+	margin-right: 5px;
+	width: 25%;
+	float: right;
+	border: 2px solid rgb(0, 84, 159);
 }
 
 h2{
-  font-weight: bold;
-  background-color: white;
-  color: rgb(0, 84, 159, 0.9);
-  padding: 20px;
-  margin-top: 20px;
-  width: 260px;
-  margin-left: 80px;
-}
-
-h3{
-  font-weight: bold;
-  background-color: white;
-  color: rgb(0, 84, 159, 0.9);
-  padding: 15px;
-  margin-top: 15px;
-  width: 260px;
-  margin-left: 80px;
+	font-weight: bold;
+	background-color: rgb(162, 33, 75, 0.9);
+	color: rgb(0, 84, 159, 0.9);
+	padding: 20px;
+	margin-top: 20px;
+	width: 260px;
+	margin-left: 80px;
+	border: 3px solid rgb(0, 84, 159);
 }
 
 .squad{
-	width: 80%;
+	width: 90%;
+	padding: 3px;
+	border: 3px solid rgb(0, 84, 159);
 	
 }
 
-.destaque, .squad{
-	border: 3px solid white;
-	margin-left: 80px;
+.destaque{
+	border: 3px solid rgb(0, 84, 159);
+	font-weight: bold;
+	font-size: 15px;
+	background-color: rgb(162, 33, 75, 0.9);
+	width: 40%;
+	color: rgb(0, 84, 159);
+	padding: 10px;
+}
+.destaque-img{
+	border: 3px solid rgb(0, 84, 159);
+	font-weight: bold;
+	font-size: 15px;
+	width: 90%;
+	color: rgb(0, 84, 159);
+	padding: 3px;
 }
 
 footer{

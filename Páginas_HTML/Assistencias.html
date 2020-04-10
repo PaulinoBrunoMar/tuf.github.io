@@ -7,6 +7,51 @@
 	<meta name="descripition" content="SuperCopa Calango">
 	<link rel= "stylesheet" href= "../css/estilo.css">
 	<link rel="shortcut icon" href="../Assets/favicon.ico">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+
+	<script>
+		$(document).ready(function() {
+		
+		var firestore = firebase.firestore();
+		var cont = 1;
+	
+		firestore.collectionGroup("DadosJogadores").orderBy("Assistências", "desc").get().then(function(querySnapshot) {
+	    	querySnapshot.forEach(function(doc) {
+	        	const myData = doc.data();
+
+	        	var tabela = document.getElementById("assistencias");
+	        	var tr = document.createElement("tr");
+	        	var tdPos = document.createElement("td");
+	        	var tdNome = document.createElement("td");
+	        	var tdGols = document.createElement("td");
+	        	var tdClube = document.createElement("td");
+
+	        	tdPos.innerText = (cont + "º");
+	        	tdNome.innerText = myData.Nome;
+	        	tdGols.innerText = myData.Assistências;
+	        	tdClube.innerText = myData.Clube;
+	        	tr.setAttribute("class", "tabela-assistencias-linhas");
+
+	        	tr.appendChild(tdPos);
+	        	tr.appendChild(tdNome);
+	        	tr.appendChild(tdGols);
+	        	tr.appendChild(tdClube);
+	        	tabela.appendChild(tr);
+
+	        	cont++;
+	        });
+	    });
+	});
+	</script>
 </head>
 <body>
 	<header> 
@@ -54,14 +99,20 @@
 			<a class="menu" href="../index.html">Início</a>
 			<a class="menu" href="Artilharia.html">Artilharia</a>
 			<a class="menu" href="Torneio.html">Torneios</a>
-			<a class="menu" href="Melhor_jogador.html">Melhores Jogadores</a>
 			<a class="menu" href="Classificacao.html">Classificação Geral</a>
 		</center>
 	</nav>
 
 	<section> 
 		<center>
-			<img id="assistencias" src="../Assets/assistencias.png" alt="Assistencia_Geral" align=”middle”>
+			<table id="assistencias">
+			<tr>
+				<th>Posição</th>
+				<th>Nome</th>
+				<th>Assistências</th>
+				<th>Clube</th>
+			</tr>
+		</table>
 		</center>
 	</section>
 	<footer> 
@@ -69,5 +120,6 @@
 			© Copyright 2019-2019 Bruno P.M 
 		</center>
 	</footer>
+	<script src="../js/app.js"></script>
 </body>
 </html>

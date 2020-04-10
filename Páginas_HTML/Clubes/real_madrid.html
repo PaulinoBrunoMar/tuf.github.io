@@ -7,6 +7,137 @@
 	<meta name="descripition" content="SuperCopa Calango">
 	<link rel= "stylesheet" href= "../../css/estilo-real_madrid.css">
 	<link rel="shortcut icon" href="../../Assets/favicon.ico">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+		<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+
+		<script>
+			$(document).ready(function() {
+
+				var firestore = firebase.firestore();
+				var cont = 1;
+
+				firestore.collection("Jogadores").doc("Madrid").collection("DadosJogadores").orderBy("Setor").orderBy("Posição", "desc").get().then(function(querySnapshot) {
+					querySnapshot.forEach(function(doc) {
+						const myData = doc.data();
+
+						var tabela = document.getElementById("real_madrid-table");
+						var total = document.getElementById("cont");
+
+						var tr = document.createElement("tr");
+						var tdPos = document.createElement("td");
+						var tdNome = document.createElement("td");
+						var tdGols = document.createElement("td");
+						var tdAssist = document.createElement("td");
+
+
+						tdPos.setAttribute("class", "POS");
+						tr.setAttribute("class", "linhas");
+
+						tdPos.innerText = myData.Posição;
+						tdNome.innerText = myData.Nome;
+						tdGols.innerText = myData.Gols;
+						tdAssist.innerText = myData.Assistências;
+						total.innerText = ("Quantidade de jogadores: " + cont);
+
+						tr.appendChild(tdPos);
+						tr.appendChild(tdNome);
+						tr.appendChild(tdGols);
+						tr.appendChild(tdAssist);
+						tabela.appendChild(tr);
+
+						cont++;
+					});
+				});
+
+				firestore.collection("Clube").doc("Madrid").get().then(function(doc) {
+					if (doc.exists) {
+						const myData = doc.data();
+
+						var moedas = document.getElementById("moedas");
+
+						moedas.innerText = ("Valor em Carteira: " + myData.Moedas);
+
+
+					} else {
+        		// doc.data() will be undefined in this case
+        		console.log("No such document!");
+        	}
+        }).catch(function(error) {
+        	console.log("Error getting document:", error);
+        });
+
+        firestore.collection("Clube").doc("Madrid").get().then(function(doc) {
+        	if (doc.exists) {
+        		const myData = doc.data();
+
+        		var jogos = document.getElementById("jogos");
+        		var vitorias = document.getElementById("vitorias");
+        		var empates = document.getElementById("empates");
+        		var derrotas = document.getElementById("derrotas");
+        		var golsPro = document.getElementById("golsPro");
+        		var golsContra = document.getElementById("golsContra");
+
+        		jogos.innerText = myData.Jogos;
+        		vitorias.innerText = myData.Vitórias;
+        		empates.innerText =  myData.Empates;
+        		derrotas.innerText =  myData.Derrotas;
+        		golsPro.innerText = myData.GolsPró;
+        		golsContra.innerText = myData.GolsContra;
+
+        	} else {
+        		// doc.data() will be undefined in this case
+        		console.log("No such document!");
+        	}
+        }).catch(function(error) {
+        	console.log("Error getting document:", error);
+        });
+
+        firestore.collection("Clube").doc("Madrid").get().then(function(doc) {
+        	if (doc.exists) {
+        		const myData = doc.data();
+
+        		var escalacaoImg = myData.Escalação;
+        		document.getElementById("escalacaoImg").src = [escalacaoImg];
+
+        		var craqueImg = myData.CraqueImg;
+        		document.getElementById("craqueImg").src = [craqueImg];
+
+        		var artilheiroImg = myData.ArtilheiroImg;
+        		document.getElementById("artilheiroImg").src = [artilheiroImg];        		
+
+        	} else {
+        		// doc.data() will be undefined in this case
+        		console.log("No such document!");
+        	}
+        }).catch(function(error) {
+        	console.log("Error getting document:", error);
+        });
+
+
+        firestore.collection("Jogadores").doc("Madrid").collection("DadosJogadores").orderBy("Gols", "desc").limit(1).get().then(function(querySnapshot) {
+        	querySnapshot.forEach(function(doc) {
+        		const myData = doc.data();
+
+        		var gols = document.getElementById("artilheiroH3");
+
+        		gols.innerText = ("Artilheiro" + " " + "(" + myData.Gols + " " + "Gols" + ")");
+
+
+        		cont++;
+        	});
+        });
+
+    });
+
+</script>
 </head>
 <body>
 	<header> 
@@ -15,17 +146,30 @@
 				Real Madrid Club de Fútbol
 			</h1>
 
-			<img class="real_madrid-escudo" src="../../Assets/Escudos/Real_Madrid.png" alt="Escudo real_madrid" align=”middle”>
+			<img class="real_madrid-escudo" src="../../Assets/Escudos/real_madrid.png" alt="Escudo real_madrid" align=”middle”>
 
-			<h3 class="lateral">
-				Valor em carteira: 0 c
-			</h3>
+			<h3 id="moedas" class="qntdMoedas"></h3>
 
-			<h3 class="lateral">
-				Classificação geral: 8º
-			</h3>
+			<h3 id="cont" alt="Quantidade de jogadores" class="qntdMoedas"></h3>
 
-			<img class="KDA" src="../../Assets/KDA/madrid-kda.png" alt="KDA madrid">
+			<table id="kda" class="KDA">
+				<tr>
+					<th>Jogos</th>
+					<th>Vitórias</th>
+					<th>Empates</th>
+					<th>Derrotas</th>
+					<th>Gols Pró</th>
+					<th>Gols Contra</th>
+				</tr>
+				<tr>
+					<td id="jogos" class="coluna"></td>
+					<td id="vitorias" class="coluna"></td>
+					<td id="empates" class="coluna"></td>
+					<td id="derrotas" class="coluna"></td>
+					<td id="golsPro" class="coluna"></td>
+					<td id="golsContra" class="coluna"></td>
+				</tr>
+			</table>
 		</center>
 	</header>
 	<nav> 
@@ -34,7 +178,6 @@
 			<a class="real_madrid-menu" href="../Torneio.html">Torneios</a>
 			<a class="real_madrid-menu" href="../Artilharia.html">Artilharia</a>
 			<a class="real_madrid-menu" href="../Assistencias.html">Assistências</a>
-			<a class="real_madrid-menu" href="../Melhor_jogador.html">Melhores Jogadores</a>
 			<a class="real_madrid-menu" href="../Classificacao.html">Classificação Geral</a>
 		</center>
 	</nav>
@@ -46,146 +189,8 @@
 				<th>Gols</th> 
 				<th>Passes</th>
 			</tr>
-			<tr>
-				<td class="ATA" >ATAQUE</td>
-				<td class="a">Hazard</td>
-				<td>4</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td class="ATA" >ATAQUE</td>
-				<td class="a">Éder</td>
-				<td>1</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="ATA" >ATAQUE</td>
-				<td class="a">Januzaj</td>
-				<td>0</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td class="ATA" >ATAQUE</td>
-				<td class="a">André-Pierre Gignac</td>
-				<td>1</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="ATA" >ATAQUE</td>
-				<td class="a">Sisto</td>
-				<td>1</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td class="ATA" >ATAQUE</td>
-				<td class="a">Berghuis</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="ATA" >ATAQUE</td>
-				<td class="a">Trossard</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="ATA" >ATAQUE</td>
-				<td class="a">Bacca</td>
-				<td>1</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Coutinho</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Sanson</td>
-				<td>1</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Seri</td>
-				<td>0</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Merino</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Rongier</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Mascherano</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="MEI" >MEIO-CAMPO</td>
-				<td class="a">Jahanbakhsh</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Escudero</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Criscito</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Vida</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Odriozola</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Fonte</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="DEF" >DEFESA</td>
-				<td class="a">Ruben Dias</td>
-				<td>1</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="GK" >GOLEIROS</td>
-				<td class="a">Miguel Ángel Moyà</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td class="GK" >GOLEIROS</td>
-				<td class="a">Ederson</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
 		</table>
-
+		
 		<aside>
 			<center>
 				<h2>
@@ -193,25 +198,21 @@
 				</h2>
 
 				<aside>
-					<a href="https://wefut.com/squad/17707934" target="_blank">
-						<img class="squad" src="http://wefut.com/squads/image/17707934/3">
+					<a href="https://sofifa.com/squad/595965" target="_blank">
+						<img id="escalacaoImg" class="squad" src="">
 					</a>
-						
+
 				</aside>
 
-				<aside>
-					<h3>
-						Craque da equipe
-					</h3>
-					<img class="destaque" src="../../Assets/Squads/real_madrid-craque.png">
-					<h3>
-						Artilheiro (4 Gol)
-					</h3>
-					<img class="destaque" src="../../Assets/Squads/real_madrid-artilheiro.png">
+				<aside>					
+					<h3 class="destaque">Craque da equipe</h3>
+					<img id="craqueImg" class="destaque-img" src="">
+
+					<h3 id="artilheiroH3" class="destaque"></h3 >
+					<img id="artilheiroImg" class="destaque-img" src="">
 				</aside>						
 			</center>
 		</aside>
-
 	</section>
 
 	<footer> 
@@ -219,5 +220,7 @@
 			© Copyright 2019-2020 Bruno P.M 
 		</center>
 	</footer>
+	<script src="../../js/app.js"></script>
+	<script src="../../js/funções.js"></script>
 </body>
 </html>
