@@ -24,7 +24,7 @@
 		var firestore = firebase.firestore();
 		var cont = 1;
 	
-		firestore.collection("Clube").orderBy("PontosClassificaçãoGeral", "desc").get().then(function(querySnapshot) {
+		firestore.collection("Clube").orderBy("PontosClassificaçãoGeral", "desc").orderBy("GoldStar", "desc").orderBy("SilverStar", "desc").orderBy("BronzeStar", "desc").orderBy("Participação", "desc").orderBy("Vitórias", "desc").get().then(function(querySnapshot) {
 	    	querySnapshot.forEach(function(doc) {
 	        	const myData = doc.data();
 
@@ -62,7 +62,7 @@
 		var firestore = firebase.firestore();
 		var cont = 1;
 
-	    firestore.collection("Clube").orderBy("PontosPrioridadeContratação", "desc").get().then(function(querySnapshot) {
+	    firestore.collection("Clube").orderBy("PontosPrioridadeContratação", "desc").orderBy("GoldStar", "desc").orderBy("SilverStar", "desc").orderBy("BronzeStar", "desc").orderBy("Participação", "desc").orderBy("Vitórias", "desc").get().then(function(querySnapshot) {
 	    	querySnapshot.forEach(function(doc) {
 	        	const myData = doc.data();
 
