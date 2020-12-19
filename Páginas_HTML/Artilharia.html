@@ -6,120 +6,124 @@
 	<meta name="author" content="Bruno Paulino">
 	<meta name="descripition" content="SuperCopa Calango">
 	<link rel= "stylesheet" href= "../css/estilo.css">
-	<link rel="shortcut icon" href="../Assets/favicon.ico">
+	<link rel="shortcut icon" href="../../Assets/favicon.ico">
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
 
 	<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
 
-	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 
-	<script>
-		$(document).ready(function() {
-		
-		var firestore = firebase.firestore();
-		var cont = 1;
-	
-		firestore.collectionGroup("DadosJogadores").where("Gols", ">", 0 ).orderBy("Gols", "desc").get().then(function(querySnapshot) {
-	    	querySnapshot.forEach(function(doc) {
-	        	const myData = doc.data();
+		<script>
+			$(document).ready(function() {
 
-	        	var tabela = document.getElementById("artilharia");
-	        	var tr = document.createElement("tr");
-	        	var tdPos = document.createElement("td");
-	        	var tdNome = document.createElement("td");
-	        	var tdGols = document.createElement("td");
-	        	var tdClube = document.createElement("td");
+				var firestore = firebase.firestore();
+				var cont = 1;
 
-	        	tdPos.innerText = (cont + "º");
-	        	tdNome.innerText = myData.Nome;
-	        	tdGols.innerText = myData.Gols;
-	        	tdClube.innerText = myData.Clube;
-	        	tr.setAttribute("class", "tabela-artilharia-linhas");
+				firestore.collectionGroup("DadosJogadores").where("Gols", ">", 0 ).orderBy("Gols", "desc").get().then(function(querySnapshot) {
+					querySnapshot.forEach(function(doc) {
+						const myData = doc.data();
 
-	        	tr.appendChild(tdPos);
-	        	tr.appendChild(tdNome);
-	        	tr.appendChild(tdGols);
-	        	tr.appendChild(tdClube);
-	        	tabela.appendChild(tr);
+						var tabela = document.getElementById("artilharia");
+						var tr = document.createElement("tr");
+						var tdPos = document.createElement("td");
+						var tdNome = document.createElement("td");
+						var tdGols = document.createElement("td");
+						var tdClube = document.createElement("td");
 
-	        	cont++;
-	        });
-	    });
-	});
-	</script>
-</head>
-<body>
-	<header> 
-		<center>
-			<h1>
-				ARTILHARIA
-			</h1>			
-			<a href="Clubes/arsenal.html">
-				<img class="Escudos" src="../Assets/Escudos/Arsenal.png" alt="Escudo Arsenal" align=”middle”>
-			</a>
+						tdPos.innerText = (cont + "º");
+						tdNome.innerText = myData.Nome;
+						tdGols.innerText = myData.Gols;
+						tdClube.innerText = myData.Clube;
+						tr.setAttribute("class", "tabela-artilharia-linhas");
 
-			<a href="Clubes/barcelona.html">
-				<img class="Escudos" src="../Assets/Escudos/Barcelona.png" alt="Escudo Barcelona"  align=”middle”>
-			</a>
+						tr.appendChild(tdPos);
+						tr.appendChild(tdNome);
+						tr.appendChild(tdGols);
+						tr.appendChild(tdClube);
+						tabela.appendChild(tr);
 
-			<a href="Clubes/bayer_leverkusen.html">
-				<img class="Escudos" src="../Assets/Escudos/Bayer_Leverkusen.png" alt="Escudo Bayern Leverkusen" align=”middle”>
-			</a>
+						cont++;
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header> 
+			<center>
+				<h1>
+					ARTILHARIA
+				</h1>			
+				<a href="Clubes/vasco.html">
+					<img class="Escudos" src="../Assets/Escudos/vasco.png" alt="Escudo vasco" align=”middle”>
+				</a>
 
-			<a href="Clubes/bayern-munique.html">
-				<img class="Escudos" src="../Assets/Escudos/Bayern_Munique.png" alt="Escudo Bayern Munique" align=”middle”>
-			</a>
+				<a href="Clubes/bragantino.html">
+					<img class="Escudos" src="../Assets/Escudos/bragantino.png" alt="Escudo bragantino" align=”middle”>
+				</a>
 
-			<a href="Clubes/internazionale.html">
-				<img class="Escudos" src="../Assets/Escudos/Internazionale.png" alt="Escudo Internazionale" align=”middle”>
-			</a>
+				<a href="Clubes/bahia.html">
+					<img class="Escudos" src="../Assets/Escudos/bahia.png" alt="Escudo bahia"  align=”middle”>
+				</a>
 
-			<a href="Clubes/Sporting.html">
-				<img class="Escudos" src="../Assets/Escudos/Sporting.png" alt="Escudo Sporting"  align=”middle”>
-			</a>
+				<a href="Clubes/santos.html">
+					<img class="Escudos" src="../Assets/Escudos/santos.png" alt="Escudo santos" align=”middle”>
+				</a>
 
-			<a href="Clubes/manchester_city.html">
-				<img class="Escudos" src="../Assets/Escudos/Manchester_City.png" alt="Escudo Manchester_City"  align=”middle”>
-			</a>
+				<a href="Clubes/sao_paulo.html">
+					<img class="Escudos" src="../Assets/Escudos/sao_paulo.png" alt="Escudo sao_paulo" align=”middle”>
+				</a>
 
-			<a href="Clubes/real_madrid.html">
-				<img class="Escudos" src="../Assets/Escudos/Real_Madrid.png" alt="Escudo Real Madrid"  align=”middle”>
-			</a>
-		</center>
-		
-	</header>
+				<a href="Clubes/sport.html">
+					<img class="Escudos" src="../Assets/Escudos/sport.png" alt="Escudo sport" align=”middle”>
+				</a>
 
-	<nav>
-		<center>
-			<a class="menu" href="../index.html">Início</a>
-			<a class="menu" href="Torneio.html">Torneios</a>
-			<a class="menu" href="Assistencias.html">Assistências</a>
-			<a class="menu" href="Classificacao.html">Classificação Geral</a>
-		</center>
-	</nav>
+				<a href="Clubes/gremio.html">
+					<img class="Escudos" src="../Assets/Escudos/gremio.png" alt="Escudo gremio"  align=”middle”>
+				</a>
 
-	<section> 
-		<center>
-			<table id="artilharia">
-			<tr>
-				<th>Posição</th>
-				<th>Nome</th>
-				<th>Gols</th>
-				<th>Clube</th>
-			</tr>
-		</table>
-		</center>
-	</section>
-	<footer> 
-		<center>
-			© Copyright 2019-2019 Bruno P.M 
-		</center>
-	</footer>
-	<script src="../js/app.js"></script>
-</body>
-</html>
+				<a href="Clubes/internacional.html">
+					<img class="Escudos" src="../Assets/Escudos/internacional.png" alt="Escudo internacional"  align=”middle”>
+				</a>
+
+				<a href="Clubes/flamengo.html">
+					<img class="Escudos" src="../Assets/Escudos/flamengo.png" alt="Escudo Shakhtar Donetsk"  align=”middle”>
+				</a>
+			</center>
+
+		</header>
+
+		<nav>
+			<center>
+				<a class="menu" href="../index.html">Início</a>
+				<a class="menu" href="Torneio.html">Torneios</a>
+				<a class="menu" href="Assistencias.html">Assistências</a>
+				<a class="menu" href="Classificacao.html">Classificação Geral</a>
+			</center>
+		</nav>
+
+		<section> 
+			<center>
+				<table id="artilharia">
+					<tr>
+						<th>Posição</th>
+						<th>Nome</th>
+						<th>Gols</th>
+						<th>Clube</th>
+					</tr>
+				</table>
+			</center>
+		</section>
+		<footer> 
+			<center>
+				© Copyright 2019-2020 Bruno P.M 
+			</center>
+		</footer>
+		<script src="../js/app.js"></script>
+	</body>
+	</html>

@@ -24,7 +24,7 @@
 		var firestore = firebase.firestore();
 		var cont = 1;
 	
-		firestore.collection("Clube").orderBy("PontosClassificaçãoGeral", "desc").orderBy("GoldStar", "desc").orderBy("SilverStar", "desc").orderBy("BronzeStar", "desc").orderBy("Participação", "desc").orderBy("Vitórias", "desc").get().then(function(querySnapshot) {
+		firestore.collection("Clube").orderBy("PontosClassificaçãoGeral", "desc").orderBy("GoldStar", "desc").orderBy("SilverStar", "desc").orderBy("BronzeStar", "desc").orderBy("Vitórias", "desc").orderBy("GolsPró", "desc").get().then(function(querySnapshot) {
 	    	querySnapshot.forEach(function(doc) {
 	        	const myData = doc.data();
 
@@ -57,36 +57,6 @@
 	        });
 	    });
 	});
-	$(document).ready(function() {
-
-		var firestore = firebase.firestore();
-		var cont = 1;
-
-	    firestore.collection("Clube").orderBy("PontosPrioridadeContratação", "desc").orderBy("GoldStar", "desc").orderBy("SilverStar", "desc").orderBy("BronzeStar", "desc").orderBy("Participação", "desc").orderBy("Vitórias", "desc").get().then(function(querySnapshot) {
-	    	querySnapshot.forEach(function(doc) {
-	        	const myData = doc.data();
-
-	        	var tabela = document.getElementById("clsfC");
-	        	var tr = document.createElement("tr");
-	        	var tdPos = document.createElement("td");
-	        	var tdNome = document.createElement("td");
-	        	var tdGols = document.createElement("td");
-
-	        	tdPos.innerText = (cont + "º");
-	        	tdNome.innerText = myData.NomeClube;
-	        	tdGols.innerText = myData.PontosPrioridadeContratação;
-	        	tr.setAttribute("class", "tabela-clsf-linhas");
-	        	
-	        	tr.appendChild(tdPos);
-	        	tr.appendChild(tdNome);
-	        	tr.appendChild(tdGols);
-	        	tabela.appendChild(tr);
-
-	        	cont++;
-	        });
-	    });
-	});
-
 	</script>
 
 </head>
@@ -96,37 +66,41 @@
 			<h1>
 				RANKING DE CLUBES
 			</h1>
-			<a href="Clubes/arsenal.html">
-				<img class="Escudos" src="../Assets/Escudos/Arsenal.png" alt="Escudo Arsenal" align=”middle”>
-			</a>
+			<a href="Clubes/vasco.html">
+					<img class="Escudos" src="../Assets/Escudos/vasco.png" alt="Escudo vasco" align=”middle”>
+				</a>
 
-			<a href="Clubes/barcelona.html">
-				<img class="Escudos" src="../Assets/Escudos/Barcelona.png" alt="Escudo Barcelona"  align=”middle”>
-			</a>
+				<a href="Clubes/bragantino.html">
+					<img class="Escudos" src="../Assets/Escudos/bragantino.png" alt="Escudo bragantino" align=”middle”>
+				</a>
 
-			<a href="Clubes/bayer_leverkusen.html">
-				<img class="Escudos" src="../Assets/Escudos/Bayer_Leverkusen.png" alt="Escudo Bayern Leverkusen" align=”middle”>
-			</a>
+				<a href="Clubes/bahia.html">
+					<img class="Escudos" src="../Assets/Escudos/bahia.png" alt="Escudo bahia"  align=”middle”>
+				</a>
 
-			<a href="Clubes/bayern-munique.html">
-				<img class="Escudos" src="../Assets/Escudos/Bayern_Munique.png" alt="Escudo Bayern Munique" align=”middle”>
-			</a>
+				<a href="Clubes/santos.html">
+					<img class="Escudos" src="../Assets/Escudos/santos.png" alt="Escudo santos" align=”middle”>
+				</a>
 
-			<a href="Clubes/internazionale.html">
-				<img class="Escudos" src="../Assets/Escudos/Internazionale.png" alt="Escudo Internazionale" align=”middle”>
-			</a>
+				<a href="Clubes/sao_paulo.html">
+					<img class="Escudos" src="../Assets/Escudos/sao_paulo.png" alt="Escudo sao_paulo" align=”middle”>
+				</a>
 
-			<a href="Clubes/Sporting.html">
-				<img class="Escudos" src="../Assets/Escudos/Sporting.png" alt="Escudo Sporting"  align=”middle”>
-			</a>
+				<a href="Clubes/sport.html">
+					<img class="Escudos" src="../Assets/Escudos/sport.png" alt="Escudo sport" align=”middle”>
+				</a>
 
-			<a href="Clubes/manchester_city.html">
-				<img class="Escudos" src="../Assets/Escudos/Manchester_City.png" alt="Escudo Manchester_City"  align=”middle”>
-			</a>
+				<a href="Clubes/gremio.html">
+					<img class="Escudos" src="../Assets/Escudos/gremio.png" alt="Escudo gremio"  align=”middle”>
+				</a>
 
-			<a href="Clubes/real_madrid.html">
-				<img class="Escudos" src="../Assets/Escudos/Real_Madrid.png" alt="Escudo Real Madrid"  align=”middle”>
-			</a>
+				<a href="Clubes/internacional.html">
+					<img class="Escudos" src="../Assets/Escudos/internacional.png" alt="Escudo internacional"  align=”middle”>
+				</a>
+
+				<a href="Clubes/flamengo.html">
+					<img class="Escudos" src="../Assets/Escudos/flamengo.png" alt="Escudo Shakhtar Donetsk"  align=”middle”>
+				</a>
 		</center>
 		
 	</header>
@@ -155,20 +129,11 @@
 			</table>
 
 			<p class="legenda">Legenda:<img class="estrelas" src="../Assets/gold_star.png">Título de temporada, <img class="estrelas" src="../Assets/silver_star.png">Vice de temporada, <img class="estrelas" src="../Assets/bronze_star.png">Terceiro de temporada</p>
-			
-			<table id="clsfC" class="tabela-cg">
-				<h1 class="thTitle">Ordem de Ccontratação</h1>
-				<tr>
-					<th>Posição</th>
-					<th>Clube</th>
-					<th>Pontos</th>
-				</tr>
-			</table>
 		</center>
 	</section>
 	<footer> 
 		<center>
-			© Copyright 2019-2019 Bruno P.M 
+			© Copyright 2019-2020 Bruno P.M 
 		</center>
 	</footer>
 	<script src="../js/app.js"></script>

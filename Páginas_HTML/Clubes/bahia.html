@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>SuperCopa Calango</title>
+	<meta name="author" content="Bruno Paulino">
+	<meta name="descripition" content="SuperCopa Calango">
+	<link rel= "stylesheet" href= "../../css/estilo-bahia.css">
+	<link rel="shortcut icon" href="../../Assets/favicon.ico">
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+		<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+		<script>
+			$(document).ready(function() {
+
+				var firestore = firebase.firestore();
+				var cont = 1;
+
+				firestore.collection("Jogadores").doc("Bahia").collection("DadosJogadores").orderBy("Setor").orderBy("Posição", "desc").get().then(function(querySnapshot) {
+					querySnapshot.forEach(function(doc) {
+						const myData = doc.data();
+
+						var tabela = document.getElementById("bahia-table");
+						var total = document.getElementById("cont");
+
+						var tr = document.createElement("tr");
+						var tdPos = document.createElement("td");
+						var tdNome = document.createElement("td");
+						var tdGols = document.createElement("td");
+						var tdAssist = document.createElement("td");
+
+
+						tdPos.setAttribute("class", "POS");
+						tr.setAttribute("class", "linhas");
+
+						tdPos.innerText = myData.Posição;
+						tdNome.innerText = myData.Nome;
+						tdGols.innerText = myData.Gols;
+						tdAssist.innerText = myData.Assistências;
+						total.innerText = ("Quantidade de jogadores: " + cont);
+
+						tr.appendChild(tdPos);
+						tr.appendChild(tdNome);
+						tr.appendChild(tdGols);
+						tr.appendChild(tdAssist);
+						tabela.appendChild(tr);
+
+						cont++;
+					});
+				});
+
+        firestore.collection("Clube").doc("Bahia").get().then(function(doc) {
+        	if (doc.exists) {
+        		const myData = doc.data();
+
+        		var jogos = document.getElementById("jogos");
+        		var vitorias = document.getElementById("vitorias");
+        		var empates = document.getElementById("empates");
+        		var derrotas = document.getElementById("derrotas");
+        		var golsPro = document.getElementById("golsPro");
+        		var golsContra = document.getElementById("golsContra");
+
+        		jogos.innerText = myData.Jogos;
+        		vitorias.innerText = myData.Vitórias;
+        		empates.innerText =  myData.Empates;
+        		derrotas.innerText =  myData.Derrotas;
+        		golsPro.innerText = myData.GolsPró;
+        		golsContra.innerText = myData.GolsContra;
+
+        	} else {
+        		// doc.data() will be undefined in this case
+        		console.log("No such document!");
+        	}
+        }).catch(function(error) {
+        	console.log("Error getting document:", error);
+        });
+
+
+        firestore.collection("Jogadores").doc("Bahia").collection("DadosJogadores").orderBy("Gols", "desc").limit(1).get().then(function(querySnapshot) {
+        	querySnapshot.forEach(function(doc) {
+        		const myData = doc.data();
+
+        		var gols = document.getElementById("artilheiroH3");
+
+        		gols.innerText = ("Artilheiro:" + " " + myData.Nome + "(" + myData.Gols + " " + "Gols" + ")");
+
+
+        		cont++;
+        	});
+        });
+
+    });
+
+</script>
+
+</head>
+<body>
+	<header> 
+		<center>
+			<h1 class="bahia-h1">
+				Esporte Clube Bahia
+			</h1>
+
+			<img class="bahia-escudo" src="../../Assets/Escudos/bahia.png" alt="Escudo bahia" align=”middle”>
+
+			<h3 id="cont" alt="Quantidade de jogadores" class="qntdMoedas"></h3>
+
+			<table id="kda" class="KDA">
+				<tr>
+					<th>Jogos</th>
+					<th>Vitórias</th>
+					<th>Empates</th>
+					<th>Derrotas</th>
+					<th>Gols Pró</th>
+					<th>Gols Contra</th>
+				</tr>
+				<tr>
+					<td id="jogos" class="coluna"></td>
+					<td id="vitorias" class="coluna"></td>
+					<td id="empates" class="coluna"></td>
+					<td id="derrotas" class="coluna"></td>
+					<td id="golsPro" class="coluna"></td>
+					<td id="golsContra" class="coluna"></td>
+				</tr>
+			</table>
+		</center>
+	</header>
+	<nav> 
+		<center>
+			<a class="bahia-menu" href="../../index.html">Início</a>
+			<a class="bahia-menu" href="../Torneio.html">Torneios</a>
+			<a class="bahia-menu" href="../Artilharia.html">Artilharia</a>
+			<a class="bahia-menu" href="../Assistencias.html">Assistências</a>
+			<a class="bahia-menu" href="../Classificacao.html">Classificação Geral</a>
+		</center>
+	</nav>
+	<section> 
+		<table id="bahia-table">
+			<tr>
+				<th>Posição</th>
+				<th>Nome</th>
+				<th>Gols</th> 
+				<th>Passes</th>
+			</tr>
+		</table>
+
+		<aside>
+			<center>
+				<h2>
+					Provável Escalação
+				</h2>
+
+				<aside>
+						<img id="escalacaoImg" class="squad" src="">
+				</aside>
+
+				<aside>					
+					<h3 class="destaque">Craque da equipe</h3>
+					<img id="craqueImg" class="destaque-img" src="../../Assets/Destaques/Bahia/craque.png">
+
+					<h3 id="artilheiroH3" class="destaque"></h3 >
+					<img id="artilheiroImg" class="destaque-img" src="">
+				</aside>						
+			</center>
+		</aside>
+
+
+	</section>
+
+	<footer> 
+		<center>
+			© Copyright 2019-2020 Bruno P.M 
+		</center>
+	</footer>
+	<script src="../../js/app.js"></script>
+</body>
+</html>

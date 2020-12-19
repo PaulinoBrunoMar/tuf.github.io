@@ -2,20 +2,23 @@ function PovoaçãoInicialBD(){
 
 	var firestore = firebase.firestore();
 
-	/*----Internazionale------------------------------------------------------------------------------*/
+	/*----São Paulo------------------------------------------------------------------------------*/
 
-		firestore.doc("Clube/Internazionale").set({
-		    Vitórias: 25,
-		    Empates: 8,
-		    Derrotas: 10,
-		    Jogos: 43,
-		    GolsPró: 70,
-		    GolsContra: 48,
-		    ClassificaçãoGeral: "1º",
-		    PontosPrioridadeContratação: 4,
-		    PontosClassificaçãoGeral: 16,
-		    NomeClube: "Internazionale",
-		    Moedas: "0 c"
+		firestore.doc("Clube/SãoPaulo").set({
+		    Vitórias: 4,
+		    Empates: 3,
+		    Derrotas: 3,
+		    Jogos: 10,
+		    GolsPró: 11,
+		    GolsContra: 11,
+		    PontosClassificaçãoGeral: 2,
+		    NomeClube: "São Paulo",
+		    ArtilheiroImg: "",
+		    CraqueImg: "",
+		    Escalação: "",
+		    BronzeStar: 0,
+		    SilverStar: 1,
+		    GoldStar: 0
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -24,103 +27,13 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-	firestore.doc("Jogadores/Internazionale/DadosJogadores/Son").set({
-		    Assistências: 13,
-		    Gols: 16,
-		    Nome: "Heung Min SON",
-		    Posição: "sa",
-		    NomeClube: "Internazionale",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Wilson").set({
-		    Assistências: 2,
-		    Gols: 8,
-		    Nome: "Callum WILSON",
-		    Posição: "ata",
-		    Clube: "Internazionale",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Smolov").set({
-		    Assistências: 3,
-		    Gols: 1,
-		    Nome: "Fedor SMOLOV",
-		    Posição: "ata",
-		    Clube: "Internazionale",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Neymar").set({
-		    Assistências: 9,
-		    Gols: 17,
-		    Nome: "NEYMAR Jr",
-		    Posição: "pe",
-		    Clube: "Internazionale",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Gnabry").set({
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Ehazard").set({
 		    Assistências: 0,
-		    Gols: 1,
-		    Nome: "Serge GNABRY",
-		    Posição: "md",
-		    Clube: "Internazionale",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Tello").set({
-		    Assistências: 7,
-		    Gols: 1,
-		    Nome: "Cristian TELLO",
-		    Posição: "me",
-		    Clube: "Internazionale",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Valbuena").set({
-		    Assistências: 2,
 		    Gols: 0,
-		    Nome: "Mathieu VALBUENA",
-		    Posição: "me",
-		    Clube: "Internazionale",
-		    Setor: "mei"
+		    Nome: "Eden Hazard",
+		    Posição: "pe",
+		    Clube: "São Paulo",
+		    Setor: "ata"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -129,57 +42,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Bruno").set({
-		    Assistências: 2,
-		    Gols: 6,
-		    Nome: "Bruno FERNANDES",
-		    Posição: "mei",
-		    Clube: "Internazionale",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Thiago").set({
-		    Assistências: 3,
-		    Gols: 4,
-		    Nome: "Thiago MENDES",
-		    Posição: "vol",
-		    Clube: "Internazionale",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Kante").set({
-		    Assistências: 2,
-		    Gols: 1,
-		    Nome: "N'Golo KANTÉ",
-		    Posição: "vol",
-		    Clube: "Internazionale",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Wass").set({
-		    Assistências: 6,
-		    Gols: 2,
-		    Nome: "Daniel WASS",
-		    Posição: "ld",
-		    Clube: "Internazionale",
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Volpi").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Tiago Volpi",
+		    Posição: "gol",
+		    Clube: "São Paulo",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -189,12 +57,27 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Guilavogui").set({
-		    Assistências: 3,
-		    Gols: 1,
-		    Nome: "Josuha GUIILAVOGUI",
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Boga").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Jérémie Boga",
+		    Posição: "pe",
+		    Clube: "São Paulo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Barrios").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Wilmar Barrios",
 		    Posição: "vol",
-		    Clube: "Internazionale",
+		    Clube: "São Paulo",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -204,27 +87,162 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Kessie").set({
-		    Assistências: 3,
-		    Gols: 4,
-		    Nome: "Franck Yannick KESSIÉ",
-		    Posição: "mc",
-		    Clube: "Internazionale",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Tierney").set({
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/CR7").set({
 		    Assistências: 1,
+		    Gols: 0,
+		    Nome: "Cristiano Ronaldo",
+		    Posição: "pe",
+		    Clube: "São Paulo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Tolisso").set({
+		    Assistências: 1,
+		    Gols: 0,
+		    Nome: "Corentin Tolisso",
+		    Posição: "mc",
+		    Clube: "São Paulo",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Mandanda").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Steve Mandanda",
+		    Posição: "gol",
+		    Clube: "São Paulo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Atal").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Youcet Atal",
+		    Posição: "ld",
+		    Clube: "São Paulo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Tah").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Jonathan Tha",
+		    Posição: "zag",
+		    Clube: "São Paulo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Neres").set({
+		    Assistências: 0,
+		    Gols: 1,
+		    Nome: "David Neres",
+		    Posição: "pd",
+		    Clube: "São Paulo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Aranguiz").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Charles Aránguiz",
+		    Posição: "mc",
+		    Clube: "São Paulo",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Zakaria").set({
+		    Assistências: 1,
+		    Gols: 0,
+		    Nome: "Denis Zakaria",
+		    Posição: "vol",
+		    Clube: "São Paulo",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/B_Mendy").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Benjamin Mendy",
+		    Posição: "le",
+		    Clube: "São Paulo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Dzyuba").set({
+		    Assistências: 1,
+		    Gols: 5,
+		    Nome: "Artem Dzyuba",
+		    Posição: "ata",
+		    Clube: "São Paulo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Tierney").set({
+		    Assistências: 0,
 		    Gols: 0,
 		    Nome: "Kieran TIERNEY",
 		    Posição: "le",
-		    Clube: "Internazionale",
+		    Clube: "São Paulo",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -234,13 +252,13 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Kolasinac").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Sead KOLASINAC",
-		    Posição: "le",
-		    Clube: "Internazionale",
-		    Setor: "zag"
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Callejon").set({
+		    Assistências: 3,
+		    Gols: 2,
+		    Nome: "José Maria Callejon",
+		    Posição: "pd",
+		    Clube: "São Paulo",
+		    Setor: "ata"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -249,245 +267,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Walker").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Kyle WALKER",
-		    Posição: "ld",
-		    Clube: "Internazionale",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Rafael").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "RAFAEL Pereira",
-		    Posição: "ld",
-		    Clube: "Internazionale",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Militao").set({
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Ribeiro").set({
 		    Assistências: 1,
-		    Gols: 0,
-		    Nome: "Éder MILITÃO",
-		    Posição: "zag",
-		    Clube: "Internazionale",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Laporte").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Aymeric LAPORTE",
-		    Posição: "zag",
-		    Clube: "Internazionale",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Toprak").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Ömer TOPRAK",
-		    Posição: "zag",
-		    Clube: "Internazionale",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Ake").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Nathan AKÉ",
-		    Posição: "zag",
-		    Clube: "Internazionale",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Internazionale/DadosJogadores/Dmitrovic").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Marko DMITROVIC",
-		    Posição: "gol",
-		    Clube: "Internazionale",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		/*----Arsenal------------------------------------------------------------------------------*/
-
-		firestore.doc("Clube/Arsenal").set({
-		    Vitórias: 6,
-		    Empates: 7,
-		    Derrotas: 21,
-		    Jogos: 34,
-		    GolsPró: 34,
-		    GolsContra: 63,
-		    ClassificaçãoaGeral: "4º",
-		    PontosPrioridadeContratação: 0,
-		    PontosClassificaçãoGeral: 2,
-		    NomeClube: "Arsenal",
-		    Moedas: "0 c"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Aboubakar").set({
-		    Assistências: 2,
-		    Gols: 3,
-		    Nome: "Vincent ABOUBAKAR",
-		    Posição: "ata",
-		    Clube: "Arsenal",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Rooney").set({
-		    Assistências: 3,
-		    Gols: 10,
-		    Nome: "Wayne Rooney",
-		    Posição: "ata",
-		    Clube: "Arsenal",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Nani").set({
-		    Assistências: 2,
-		    Gols: 3,
-		    Nome: "Luís Carlos(NANI)",
-		    Posição: "pe",
-		    Clube: "Arsenal",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Aguero").set({
-		    Assistências: 2,
-		    Gols: 2,
-		    Nome: "Sérgio AGÜERO",
-		    Posição: "ata",
-		    Clube: "Arsenal",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Silva").set({
-		    Assistências: 3,
-		    Gols: 2,
-		    Nome: "André SILVA",
-		    Posição: "ata",
-		    Clube: "Arsenal",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Gervinho").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Gervais Lombe(GERVINHO)",
-		    Posição: "pe",
-		    Clube: "Arsenal",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Chiesa").set({
-		    Assistências: 0,
-		    Gols: 4,
-		    Nome: "Federico CHIESA",
-		    Posição: "sa",
-		    Clube: "Arsenal",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Paredes").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Leandro PAREDES",
-		    Posição: "mc",
-		    Clube: "Arsenal",
+		    Gols: 1,
+		    Nome: "Everton Ribeiro",
+		    Posição: "md",
+		    Clube: "São Paulo",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -497,12 +282,87 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Nzonzi").set({
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Rebic").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Ante Rebic´",
+		    Posição: "pe",
+		    Clube: "São Paulo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Soyuncu").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Çaglar Söyüncü",
+		    Posição: "zag",
+		    Clube: "São Paulo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Zaha").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Wilfred Zaha",
+		    Posição: "pe",
+		    Clube: "São Paulo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Albiol").set({
 		    Assistências: 0,
 		    Gols: 1,
-		    Nome: "Stevan NZONZI",
-		    Posição: "vol",
-		    Clube: "Arsenal",
+		    Nome: "Raúl Albiol",
+		    Posição: "zag",
+		    Clube: "São Paulo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Matip").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Joël Matip",
+		    Posição: "zag",
+		    Clube: "São Paulo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/J_Rodriguez").set({
+		    Assistências: 1,
+		    Gols: 1,
+		    Nome: "James Rodríguez",
+		    Posição: "mei",
+		    Clube: "São Paulo",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -512,12 +372,188 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Chamberlain").set({
+		firestore.doc("Jogadores/SãoPaulo/DadosJogadores/Pavard").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Benjamin Pavard",
+		    Posição: "ld",
+		    Clube: "São Paulo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		/*----Vasco------------------------------------------------------------------------------*/
+
+		firestore.doc("Clube/Vasco").set({
+		    Vitórias: 4,
+		    Empates: 5,
+		    Derrotas: 1,
+		    Jogos: 10,
+		    GolsPró: 16,
+		    GolsContra: 10,
+		    PontosClassificaçãoGeral: 3,
+		    NomeClube: "Vasco",
+		    ArtilheiroImg: "",
+		    CraqueImg: "",
+		    Escalação: "",
+		    BronzeStar: 1,
+		    SilverStar: 1,
+		    GoldStar: 0
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Kane").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Harry Kane",
+		    Posição: "ata",
+		    Clube: "Vasco",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Coutinho").set({
+		    Assistências: 2,
+		    Gols: 0,
+		    Nome: "Philippe Coutinho",
+		    Posição: "mei",
+		    Clube: "Vasco",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Mdembele").set({
+		    Assistências: 0,
+		    Gols: 6,
+		    Nome: "Moussa Dembélé",
+		    Posição: "ata",
+		    Clube: "Vasco",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Coman").set({
 		    Assistências: 1,
+		    Gols: 0,
+		    Nome: "Kingsley Coman",
+		    Posição: "pe",
+		    Clube: "Vasco",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Jgomez").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Joe Gomez",
+		    Posição: "zag",
+		    Clube: "Vasco",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Fanderson").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Felipe Anderson",
+		    Posição: "pe",
+		    Clube: "Vasco",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Adama").set({
+		    Assistências: 2,
+		    Gols: 1,
+		    Nome: "Adama Traoré",
+		    Posição: "pd",
+		    Clube: "Vasco",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Kepa").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Kepa Arrizabalaga",
+		    Posição: "gol",
+		    Clube: "Vasco",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Bernat").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Juan Bernat",
+		    Posição: "le",
+		    Clube: "Vasco",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Chamberlain").set({
+		    Assistências: 0,
 		    Gols: 0,
 		    Nome: "Oxlade CHAMBERLAIN",
 		    Posição: "mc",
-		    Clube: "Arsenal",
+		    Clube: "Vasco",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -527,28 +563,13 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Dembele").set({
-		    Assistências: 1,
-		    Gols: 1,
-		    Nome: "Ousmane DEMBÉLÉ",
-		    Posição: "pe",
-		    Clube: "Arsenal",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Ndidi").set({
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Hermoso").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Wilfred NDIDI",
-		    Posição: "vol",
-		    Clube: "Arsenal",
-		    Setor: "mei"
+		    Nome: "Mario Hermoso",
+		    Posição: "zag",
+		    Clube: "Vasco",
+		    Setor: "zag"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -557,230 +578,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Reus").set({
-		    Assistências: 3,
-		    Gols: 5,
-		    Nome: "Marco REUS",
-		    Posição: "mei",
-		    Clube: "Arsenal",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Vini").set({
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Teixeira").set({
 		    Assistências: 4,
-		    Gols: 1,
-		    Nome: "Vinícius Júnios(VINI JR)",
-		    Posição: "pe",
-		    Clube: "Arsenal",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Rui").set({
-		    Assistências: 1,
-		    Gols: 1,
-		    Nome: "Mário RUI",
-		    Posição: "le",
-		    Clube: "Arsenal",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Alexander").set({
-		    Assistências: 5,
-		    Gols: 0,
-		    Nome: "Trent ALEXANDER ARNOLD",
-		    Posição: "ld",
-		    Clube: "Arsenal",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Zappacosta").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Davide ZAPPACOSTA",
-		    Posição: "ld",
-		    Clube: "Arsenal",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Maicon").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "MAICON Pereira",
-		    Posição: "zag",
-		    Clube: "Arsenal",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Christensen").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Andreas CHRISTENSEN",
-		    Posição: "zag",
-		    Clube: "Arsenal",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Ramos").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Sérgio RAMOS",
-		    Posição: "zag",
-		    Clube: "Arsenal",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/VanDijk").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Virgil VAN DIJK",
-		    Posição: "zag",
-		    Clube: "Arsenal",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Arsenal/DadosJogadores/Cragno").set({
-		    Assistências: 1,
-		    Gols: 0,
-		    Nome: "Alessio CRAGNO",
-		    Posição: "gol",
-		    Clube: "Arsenal",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		/*----Barcelona------------------------------------------------------------------------------*/
-
-		firestore.doc("Clube/Barcelona").set({
-		    Vitórias: 10,
-		    Empates: 6,
-		    Derrotas: 19,
-		    Jogos: 35,
-		    GolsPró: 36,
-		    GolsContra: 58,
-		    ClassificaçãoaGeral: "7º",
-		    PontosPrioridadeContratação: 0,
-		    PontosClassificaçãoGeral: 0,
-		    NomeClube: "Barcelona",
-		    Moedas: "0 c"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Piatek").set({
-		    Assistências: 6,
-		    Gols: 10,
-		    Nome: "Krzysztof PIATEK",
-		    Posição: "ata",
-		    Clube: "Barcelona",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Sterling").set({
-		    Assistências: 0,
-		    Gols: 1,
-		    Nome: "Raheem STELING",
-		    Posição: "pe",
-		    Clube: "Barcelona",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Werner").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Timo WERNER",
-		    Posição: "ata",
-		    Clube: "Barcelona",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Felix").set({
-		    Assistências: 3,
-		    Gols: 4,
-		    Nome: "João FÉLIX",
+		    Gols: 2,
+		    Nome: "Alex Teixeira",
 		    Posição: "sa",
-		    Clube: "Barcelona",
+		    Clube: "Vasco",
 		    Setor: "ata"
 		})
 		.then(function() {
@@ -790,102 +593,87 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Raphinha").set({
-		    Assistências: 3,
-		    Gols: 2,
-		    Nome: "Raphael Dias(RAPHINHA)",
-		    Posição: "md",
-		    Clube: "Barcelona",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Maximin").set({
-		    Assistências: 3,
-		    Gols: 1,
-		    Nome: "Saint MAXIMIN",
-		    Posição: "me",
-		    Clube: "Barcelona",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/SMina").set({
-		    Assistências: 0,
-		    Gols: 1,
-		    Nome: "Santi MINA",
-		    Posição: "ata",
-		    Clube: "Barcelona",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Messi").set({
-		    Assistências: 3,
-		    Gols: 6,
-		    Nome: "Lionel Messi",
-		    Posição: "pd",
-		    Clube: "Barcelona",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Allan").set({
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Correa").set({
 		    Assistências: 1,
-		    Gols: 1,
-		    Nome: "ALLAN Marques",
-		    Posição: "mc",
-		    Clube: "Barcelona",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Havertz").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Kai HAVERTZ",
-		    Posição: "mei",
-		    Clube: "Barcelona",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Paqueta").set({
-		    Assistências: 5,
 		    Gols: 3,
-		    Nome: "Lucas PAQUETÁ",
-		    Posição: "mc",
-		    Clube: "Barcelona",
+		    Nome: "Joaquín Correa",
+		    Posição: "sa",
+		    Clube: "Vasco",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Hakimi").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Achraf Hakimi",
+		    Posição: "ld",
+		    Clube: "Vasco",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Elvedi").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Nico Elvedi",
+		    Posição: "zag",
+		    Clube: "Vasco",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Klostermann").set({
+		    Assistências: 1,
+		    Gols: 0,
+		    Nome: "Lukas Klostermann",
+		    Posição: "zag",
+		    Clube: "Vasco",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Cillessen").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Jasper Cillessen",
+		    Posição: "gol",
+		    Clube: "Vasco",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Matic").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Nemanja Matic",
+		    Posição: "vol",
+		    Clube: "Vasco",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -895,12 +683,248 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Pellegrini").set({
-		    Assistências: 1,
-		    Gols: 2,
-		    Nome: "Lorenzo PELLEGRINI",
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Semedo").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Nelson Semedo",
+		    Posição: "ld",
+		    Clube: "Vasco",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Thernandez").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Theo Hernández",
+		    Posição: "le",
+		    Clube: "Vasco",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Sissoko").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Moussa Sissoko",
+		    Posição: "vol",
+		    Clube: "Vasco",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Dpereira").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Danilo Pereira",
+		    Posição: "vol",
+		    Clube: "Vasco",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Vasco/DadosJogadores/Mbappe").set({
+		    Assistências: 2,
+		    Gols: 5,
+		    Nome: "Kylian Mbappé",
+		    Posição: "ata",
+		    Clube: "Vasco",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		/*----Bahia------------------------------------------------------------------------------*/
+
+		firestore.doc("Clube/Bahia").set({
+		  	Vitórias: 1,
+		    Empates: 4,
+		    Derrotas: 5,
+		    Jogos: 10,
+		    GolsPró: 6,
+		    GolsContra: 15,
+		    PontosClassificaçãoGeral: 0,
+		    NomeClube: "Bahia",
+		    ArtilheiroImg: "",
+		    CraqueImg: "",
+		    Escalação: "",
+		    BronzeStar: 0,
+		    SilverStar: 0,
+		    GoldStar: 0
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Onana").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "André Onana",
+		    Posição: "gol",
+		    Clube: "Bahia",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Kante").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "N'golo kanté",
+		    Posição: "mc",
+		    Clube: "Bahia",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Neto").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Norberto Murara Net",
+		    Posição: "gol",
+		    Clube: "Bahia",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Militao").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Eder Milião",
+		    Posição: "zag",
+		    Clube: "Bahia",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Ake").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Nathan Aké",
+		    Posição: "zag",
+		    Clube: "Bahia",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Dias").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Ruben Dias",
+		    Posição: "zag",
+		    Clube: "Bahia",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Lodi").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Renan Lodi",
+		    Posição: "le",
+		    Clube: "Bahia",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Chillwel").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Ben Chillwel",
+		    Posição: "le",
+		    Clube: "Bahia",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Torreira").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Lucas Torreira",
+		    Posição: "vol",
+		    Clube: "Bahia",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Beek").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Donny Van de Beek",
 		    Posição: "mei",
-		    Clube: "Barcelona",
+		    Clube: "Bahia",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -910,42 +934,27 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Llorent").set({
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Rice").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Declan Rice",
+		    Posição: "vol",
+		    Clube: "Bahia",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Kovacic").set({
 		    Assistências: 1,
 		    Gols: 0,
-		    Nome: "Marcos LLORENT",
-		    Posição: "vol",
-		    Clube: "Barcelona",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Weigl").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Julian WEIGL",
-		    Posição: "vol",
-		    Clube: "Barcelona",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Goretzka").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Leon GORETZKA",
+		    Nome: "Mateo Kovacic",
 		    Posição: "mc",
-		    Clube: "Barcelona",
+		    Clube: "Bahia",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -955,12 +964,72 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Zaniolo").set({
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Fati").set({
+		    Assistências: 0,
+		    Gols: 2,
+		    Nome: "Ansu Fati",
+		    Posição: "pe",
+		    Clube: "Bahia",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Neves").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Rúben Neves",
+		    Posição: "vol",
+		    Clube: "Bahia",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Greenwood").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Mason Greenwood",
+		    Posição: "pd",
+		    Clube: "Bahia",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Thazard").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Thorgan Hazard",
+		    Posição: "pd",
+		    Clube: "Bahia",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Zaniolo").set({
 		    Assistências: 0,
 		    Gols: 0,
 		    Nome: "Nicolò ZANIOLO",
 		    Posição: "mei",
-		    Clube: "Barcelona",
+		    Clube: "Bahia",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -970,87 +1039,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Mandi").set({
-		    Assistências: 2,
-		    Gols: 0,
-		    Nome: "Aïssa Mandi",
-		    Posição: "zag",
-		    Clube: "Barcelona",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Pavard").set({
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Bellerin").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Benjamin PAVARD",
-		    Posição: "zag",
-		    Clube: "Barcelona",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Diallo").set({
-		    Assistências: 0,
-		    Gols: 2,
-		    Nome: "Abdou DIALLO",
-		    Posição: "zag",
-		    Clube: "Barcelona",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Mendy").set({
-		    Assistências: 2,
-		    Gols: 0,
-		    Nome: "Ferland MENDY",
-		    Posição: "le",
-		    Clube: "Barcelona",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Upamecano").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Dayot UPAMECANO",
-		    Posição: "zag",
-		    Clube: "Barcelona",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Bissaka").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Aaron WAN BISSAKA",
+		    Nome: "Hector Bellerín",
 		    Posição: "ld",
-		    Clube: "Barcelona",
+		    Clube: "Bahia",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -1060,64 +1054,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Barcelona/DadosJogadores/Lafont").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Alban LAFONT",
-		    Posição: "gol",
-		    Clube: "Barcelona",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		/*----Leverkusen------------------------------------------------------------------------------*/
-
-		firestore.doc("Clube/Leverkusen").set({
-		    Vitórias: 11,
-		    Empates: 10,
-		    Derrotas: 11,
-		    Jogos: 32,
-		    GolsPró: 28,
-		    GolsContra: 26,
-		    ClassificaçãoaGeral: "6º",
-		    PontosPrioridadeContratação: 0,
-		    PontosClassificaçãoGeral: 2,
-		    NomeClube: "Leverkusen",
-		    Moedas: "0 c"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Batshuayi").set({
-		    Assistências: 3,
-		    Gols: 11,
-		    Nome: "Michy BATSHUAYI",
-		    Posição: "ata",
-		    Clube: "Leverkusen",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Oyarzabal").set({
-		    Assistências: 4,
-		    Gols: 9,
-		    Nome: "Mikel OYARZABAL",
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Cebolinha").set({
+		    Assistências: 1,
+		    Gols: 1,
+		    Nome: "Everton (Cebolinha)",
 		    Posição: "pe",
-		    Clube: "Leverkusen",
+		    Clube: "Bahia",
 		    Setor: "ata"
 		})
 		.then(function() {
@@ -1127,207 +1069,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Rashford").set({
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Walker").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Marcus RASHFORD",
-		    Posição: "me",
-		    Clube: "Leverkusen",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Jesus").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Gabriel JESUS",
-		    Posição: "ata",
-		    Clube: "Leverkusen",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Coman").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Kingsley COMAN",
-		    Posição: "me",
-		    Clube: "Leverkusen",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Pepe").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Nicolas PÉPÉ",
-		    Posição: "md",
-		    Clube: "Leverkusen",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Eriksen").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Christian ERIKSEN",
-		    Posição: "mei",
-		    Clube: "Leverkusen",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Fred").set({
-		    Assistências: 2,
-		    Gols: 3,
-		    Nome: "Frederico R.(FRED)",
-		    Posição: "vol",
-		    Clube: "Leverkusen",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Brandt").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Julian BRANDT",
-		    Posição: "mei",
-		    Clube: "Leverkusen",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Partey").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Thomas PARTEY",
-		    Posição: "mc",
-		    Clube: "Leverkusen",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Beek").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Donne VAN DE BEEK",
-		    Posição: "mc",
-		    Clube: "Leverkusen",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Fabinho").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Fábio Henrique(FABINHO)",
-		    Posição: "vol",
-		    Clube: "Leverkusen",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Lallana").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Adam LALLANA",
-		    Posição: "mc",
-		    Clube: "Leverkusen",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Djene").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "DJENÉ Dakonam",
-		    Posição: "zag",
-		    Clube: "Leverkusen",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Kimpembe").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Presnel KIMPEMBE",
-		    Posição: "zag",
-		    Clube: "Leverkusen",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Corona").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Jesús CORONA",
+		    Nome: "Kyle Walker",
 		    Posição: "ld",
-		    Clube: "Leverkusen",
+		    Clube: "Bahia",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -1337,27 +1084,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Semedo").set({
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Cuesta").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Nelson SEMEDO",
-		    Posição: "ld",
-		    Clube: "Leverkusen",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Raul").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "RAÚL Michel",
+		    Nome: "Vitor Cuesta",
 		    Posição: "zag",
-		    Clube: "Leverkusen",
+		    Clube: "Bahia",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -1367,94 +1099,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Gaya").set({
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Pguerreiro").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "José Luis GAYÁ",
-		    Posição: "le",
-		    Clube: "Leverkusen",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Alaba").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "David ALABA",
-		    Posição: "le",
-		    Clube: "Leverkusen",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Lopez").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Pau LÓPEZ",
-		    Posição: "gol",
-		    Clube: "Leverkusen",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Leverkusen/DadosJogadores/Akinfev").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Igor Akinfeev",
-		    Posição: "gol",
-		    Clube: "Leverkusen",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		/*----Bayern------------------------------------------------------------------------------*/
-
-		firestore.doc("Clube/Bayern").set({
-		    Vitórias: 5,
-		    Empates: 2,
-		    Derrotas: 10,
-		    Jogos: 17,
-		    GolsPró: 27,
-		    GolsContra: 36,
-		    ClassificaçãoaGeral: "5º",
-		    PontosPrioridadeContratação: 0,
-		    PontosClassificaçãoGeral: 2,
-		    NomeClube: "Bayern de Munique",
-		    Moedas: "2 c"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Benedetto").set({
-		    Assistências: 0,
-		    Gols: 3,
-		    Nome: "Darío BENEDETTO",
+		    Nome: "Paolo Guerreiro",
 		    Posição: "ata",
-		    Clube: "Bayern de Munique",
+		    Clube: "Bahia",
 		    Setor: "ata"
 		})
 		.then(function() {
@@ -1464,163 +1114,13 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Mbappe").set({
-		    Assistências: 3,
-		    Gols: 11,
-		    Nome: "Kylian MBAPPE",
-		    Posição: "ata",
-		    Clube: "Bayern de Munique",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Muriel").set({
-		    Assistências: 0,
-		    Gols: 1,
-		    Nome: "Luis MURIEL",
-		    Posição: "ata",
-		    Clube: "Bayern de Munique",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Lanzini").set({
-		    Assistências: 1,
-		    Gols: 0,
-		    Nome: "Manuel LANZINI",
-		    Posição: "mei",
-		    Clube: "Bayern de Munique",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Raktic").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Ivan RAKTIC",
-		    Posição: "mc",
-		    Clube: "Bayern de Munique",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Moura").set({
-		    Assistências: 2,
-		    Gols: 1,
-		    Nome: "Lucas MOURA",
-		    Posição: "md",
-		    Clube: "Bayern de Munique",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Depay").set({
-		    Assistências: 3,
-		    Gols: 6,
-		    Nome: "Mephis DEPAY",
-		    Posição: "sa",
-		    Clube: "Bayern de Munique",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/DSuarez").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Denis Suárez",
-		    Posição: "me",
-		    Clube: "Bayern de Munique",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Kostic").set({
-		    Assistências: 7,
-		    Gols: 1,
-		    Nome: "Filip KOSTIC",
-		    Posição: "me",
-		    Clube: "Bayern de Munique",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Sissoko").set({
-		    Assistências: 1,
-		    Gols: 0,
-		    Nome: "Moussa SISSOKO",
-		    Posição: "vol",
-		    Clube: "Bayern de Munique",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Hulk").set({
-		    Assistências: 1,
-		    Gols: 1,
-		    Nome: "Givanildo Vieira(HULK)",
-		    Posição: "pd",
-		    Clube: "Bayern de Munique",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Diaby").set({
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Gabigol").set({
 		    Assistências: 0,
 		    Gols: 2,
-		    Nome: "Moussa DIABY",
-		    Posição: "me",
-		    Clube: "Bayern de Munique",
-		    Setor: "mei"
+		    Nome: "Gabriel Barbosa",
+		    Posição: "ata",
+		    Clube: "Bahia",
+		    Setor: "ata"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -1629,13 +1129,53 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Kluivert").set({
+		firestore.doc("Jogadores/Bahia/DadosJogadores/Salah").set({
+		    Assistências: 1,
+		    Gols: 1,
+		    Nome: "Mohamed Salah",
+		    Posição: "pd",
+		    Clube: "Bahia",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		/*----Santos------------------------------------------------------------------------------*/
+
+		firestore.doc("Clube/Santos").set({
+		    Vitórias: 0,
+		    Empates: 2,
+		    Derrotas: 4,
+		    Jogos: 6,
+		    GolsPró: 0,
+		    GolsContra: 5,
+		    PontosClassificaçãoGeral: 0,
+		    NomeClube: "Santos",
+		    ArtilheiroImg: "",
+		    CraqueImg: "",
+		    Escalação: "",
+		    BronzeStar: 0,
+		    SilverStar: 0,
+		    GoldStar: 0
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Tsilva").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Justin KLUIVERT",
-		    Posição: "me",
-		    Clube: "Bayern de Munique",
-		    Setor: "mei"
+		    Nome: "Thiago Silva",
+		    Posição: "zag",
+		    Clube: "Santos",
+		    Setor: "zag"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -1644,12 +1184,102 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Marcone").set({
+		firestore.doc("Jogadores/Santos/DadosJogadores/Hulk").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Iván MARCONE",
-		    Posição: "VOL",
-		    Clube: "Bayern de Munique",
+		    Nome: "Givanildo Vieira de Souza(Hulk)",
+		    Posição: "pd",
+		    Clube: "Santos",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Bernardeschi").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Federico Bernardeschi",
+		    Posição: "pd",
+		    Clube: "Santos",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Muriel").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Luis Muriel",
+		    Posição: "ata",
+		    Clube: "Santos",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Dcosta").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Diego Costa",
+		    Posição: "ata",
+		    Clube: "Santos",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Ribery").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Franck Ribéry",
+		    Posição: "pe",
+		    Clube: "Santos",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Pulisic").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Christian Pulisic",
+		    Posição: "pe",
+		    Clube: "Santos",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Paqueta").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Lucas Paquetá",
+		    Posição: "mei",
+		    Clube: "Santos",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -1659,12 +1289,27 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Winks").set({
-		    Assistências: 3,
+		firestore.doc("Jogadores/Santos/DadosJogadores/Oscar").set({
+		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Harry WINKS",
+		    Nome: "Oscar dos Santos",
+		    Posição: "mei",
+		    Clube: "Santos",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Matuidi").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Blaise Matuidi",
 		    Posição: "mc",
-		    Clube: "Bayern de Munique",
+		    Clube: "Santos",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -1674,12 +1319,132 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Antunes").set({
+		firestore.doc("Jogadores/Santos/DadosJogadores/Rabiot").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Vitorino G. P. ANTUNES",
+		    Nome: "Adrien Rabiot",
+		    Posição: "mc",
+		    Clube: "Santos",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Paredes").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Leandro Paredes",
+		    Posição: "vol",
+		    Clube: "Santos",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Can").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Emre Can",
+		    Posição: "mc",
+		    Clube: "Santos",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Lecomte").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Benjamin Lecomte",
+		    Posição: "gol",
+		    Clube: "Santos",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Savic").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Stefan Savic",
+		    Posição: "zag",
+		    Clube: "Santos",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Radu").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Stefan Radu",
+		    Posição: "zag",
+		    Clube: "Santos",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Pezzella").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Germán Pezzella",
+		    Posição: "zag",
+		    Clube: "Santos",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Evans").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Jonny Evans",
+		    Posição: "zag",
+		    Clube: "Santos",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Marcelo").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Marcelo Vieira",
 		    Posição: "le",
-		    Clube: "Bayern de Munique",
+		    Clube: "Santos",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -1689,12 +1454,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Bailly").set({
+		firestore.doc("Jogadores/Santos/DadosJogadores/Davies").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Eric BAILLY",
-		    Posição: "zag",
-		    Clube: "Bayern de Munique",
+		    Nome: "Alphonso Davies",
+		    Posição: "le",
+		    Clube: "Santos",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -1704,27 +1469,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Smalling").set({
+		firestore.doc("Jogadores/Santos/DadosJogadores/Azpilicueta").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Chris SMALLING",
-		    Posição: "zag",
-		    Clube: "Bayern de Munique",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Danilo").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "DANILO Luiz",
+		    Nome: "César Azpilicueta",
 		    Posição: "ld",
-		    Clube: "Bayern de Munique",
+		    Clube: "Santos",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -1734,139 +1484,128 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Halstenberg").set({
+		firestore.doc("Jogadores/Santos/DadosJogadores/Cuadrado").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Juan Guillermo Cuadrado",
+		    Posição: "ld",
+		    Clube: "Santos",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Lopes").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Anthony Lopes",
+		    Posição: "gol",
+		    Clube: "Santos",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Santos/DadosJogadores/Mane").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Sadio Mané",
+		    Posição: "pe",
+		    Clube: "Santos",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		
+		/*----Sport------------------------------------------------------------------------------*/
+
+		firestore.doc("Clube/Sport").set({
+		    Vitórias: 4,
+		    Empates: 2,
+		    Derrotas: 0,
+		    Jogos: 6,
+		    GolsPró: 13,
+		    GolsContra: 3,
+		    PontosClassificaçãoGeral: 4,
+		    NomeClube: "Sport",
+		    ArtilheiroImg: "",
+		    CraqueImg: "",
+		    Escalação: "",
+		    BronzeStar: 0,
+		    SilverStar: 0,
+		    GoldStar: 1
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Casil").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Carlos Henrrique Casemiro",
+		    Posição: "vol",
+		    Clube: "Sport",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Andrada").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Esteban Andrada",
+		    Posição: "gol",
+		    Clube: "Sport",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Diallo").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Abdou Diallo",
+		    Posição: "zag",
+		    Clube: "Sport",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Portu").set({
 		    Assistências: 1,
 		    Gols: 0,
-		    Nome: "Marcel HALSTENBERG",
-		    Posição: "le",
-		    Clube: "Bayern de Munique",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Mbabu").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Kevin MBABU",
-		    Posição: "ld",
-		    Clube: "Bayern de Munique",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Sidnei").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "SIDNEI Rechel",
-		    Posição: "zag",
-		    Clube: "Bayern de Munique",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Perin").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Mattia PERIN",
-		    Posição: "gol",
-		    Clube: "Bayern de Munique",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Bayern/DadosJogadores/Ulreich").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Sven Ulreich",
-		    Posição: "gol",
-		    Clube: "Bayern de Munique",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		/*----Sporting------------------------------------------------------------------------------*/
-
-		firestore.doc("Clube/Sporting").set({
-		    Vitórias: 17,
-		    Empates: 9,
-		    Derrotas: 18,
-		    Jogos: 44,
-		    GolsPró: 62,
-		    GolsContra: 63,
-		    ClassificaçãoaGeral: "2º",
-		    PontosPrioridadeContratação: 2,
-			PontosClassificaçãoGeral: 4,
-			NomeClube: "Sporting",
-			Moedas: "0 c"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Yedder").set({
-		    Assistências: 7,
-		    Gols: 8,
-		    Nome: "Wissam BEN YEDDER",
-		    Posição: "ata",
-		    Clube: "Sporting",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Haland").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Erling Braut HALAND",
-		    Posição: "ata",
-		    Clube: "Sporting",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Portu").set({
-		    Assistências: 9,
-		    Gols: 11,
 		    Nome: "Cristian Portugés(PORTU)",
 		    Posição: "pd",
-		    Clube: "Sporting",
+		    Clube: "Sport",
 		    Setor: "ata"
 		})
 		.then(function() {
@@ -1876,12 +1615,57 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Sporting/DadosJogadores/DeBruyne").set({
-		    Assistências: 3,
-		    Gols: 4,
-		    Nome: "Kevin DE BRUYNE",
-		    Posição: "mei",
-		    Clube: "Sporting",
+		firestore.doc("Jogadores/Sport/DadosJogadores/Smalling").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Chris Smalling",
+		    Posição: "zag",
+		    Clube: "Sport",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Kimpembe").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Presnel Kimpembe",
+		    Posição: "zag",
+		    Clube: "Sport",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Grimaldo").set({
+		    Assistências: 1,
+		    Gols: 0,
+		    Nome: "Álex Grimaldo",
+		    Posição: "le",
+		    Clube: "Sport",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Perez").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Enzo Perez",
+		    Posição: "mc",
+		    Clube: "Sport",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -1891,13 +1675,13 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Balde").set({
-		    Assistências: 6,
-		    Gols: 4,
-		    Nome: "Keita BALDÉ",
-		    Posição: "ata",
-		    Clube: "Sporting",
-		    Setor: "ata"
+		firestore.doc("Jogadores/Sport/DadosJogadores/Moutinho").set({
+		    Assistências: 1,
+		    Gols: 0,
+		    Nome: "João Moutinho",
+		    Posição: "mc",
+		    Clube: "Sport",
+		    Setor: "mei"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -1906,28 +1690,13 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Salah").set({
-		    Assistências: 13,
-		    Gols: 14,
-		    Nome: "Mohamed SALAH",
-		    Posição: "pd",
-		    Clube: "Sporting",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Malinovskyi").set({
+		firestore.doc("Jogadores/Sport/DadosJogadores/Taison").set({
 		    Assistências: 2,
-		    Gols: 2,
-		    Nome: "Ruslan MALINOVSKYI",
-		    Posição: "mc",
-		    Clube: "Sporting",
-		    Setor: "mei"
+		    Gols: 5,
+		    Nome: "Taison Barcellos",
+		    Posição: "pe",
+		    Clube: "Sport",
+		    Setor: "ata"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -1936,58 +1705,13 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Darder").set({
-		    Assistências: 0,
-		    Gols: 1,
-		    Nome: "Sergi DARDER",
-		    Posição: "mc",
-		    Clube: "Sporting",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Barella").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Nicolò BARELLA",
-		    Posição: "mc",
-		    Clube: "Sporting",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Nainggolan").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Radja NAINGGOLAN",
-		    Posição: "mei",
-		    Clube: "Sporting",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Matuidi").set({
+		firestore.doc("Jogadores/Sport/DadosJogadores/Weghorst").set({
 		    Assistências: 1,
-		    Gols: 0,
-		    Nome: "Blaise MATUIDI",
-		    Posição: "vol",
-		    Clube: "Sporting",
-		    Setor: "mei"
+		    Gols: 3,
+		    Nome: "Wout Weghorst",
+		    Posição: "ata",
+		    Clube: "Sport",
+		    Setor: "ata"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -1996,28 +1720,13 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Tsygankov").set({
-		    Assistências: 1,
-		    Gols: 2,
-		    Nome: "Viktor TSYGANKOV",
-		    Posição: "md",
-		    Clube: "Sporting",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Stepanenko").set({
+		firestore.doc("Jogadores/Sport/DadosJogadores/Sirigu").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Taras STEPANENKO",
-		    Posição: "vol",
-		    Clube: "Sporting",
-		    Setor: "mei"
+		    Nome: "Salvatore Sirigu",
+		    Posição: "gol",
+		    Clube: "Sport",
+		    Setor: "zag"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -2026,13 +1735,13 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Gabriel").set({
+		firestore.doc("Jogadores/Sport/DadosJogadores/Denayer").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "GABRIEL Appelt",
-		    Posição: "mc",
-		    Clube: "Sporting",
-		    Setor: "mei"
+		    Nome: "Jason Denayer",
+		    Posição: "zag",
+		    Clube: "Sport",
+		    Setor: "zag"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -2041,12 +1750,42 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Cancelo").set({
+		firestore.doc("Jogadores/Sport/DadosJogadores/Benatia").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Mehdi Benatia",
+		    Posição: "zag",
+		    Clube: "Sport",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Acuña").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Marcos Acuña",
+		    Posição: "le",
+		    Clube: "Sport",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Cancelo").set({
 		    Assistências: 1,
 		    Gols: 0,
 		    Nome: "João CANCELO",
 		    Posição: "ld",
-		    Clube: "Sporting",
+		    Clube: "Sport",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -2056,304 +1795,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Nastasic").set({
+		firestore.doc("Jogadores/Sport/DadosJogadores/Leiva").set({
 		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Matija NASTASIC",
-		    Posição: "zag",
-		    Clube: "Sporting",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Angelino").set({
-		    Assistências: 1,
-		    Gols: 0,
-		    Nome: "José Ángel(ANGELIÑO)",
-		    Posição: "le",
-		    Clube: "Sporting",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Vogt").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Kevin VOGT",
-		    Posição: "zag",
-		    Clube: "Sporting",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Hernandez").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Lucas HERNÁNDEZ",
-		    Posição: "zag",
-		    Clube: "Sporting",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Varane").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Raphael VARANE",
-		    Posição: "zag",
-		    Clube: "Sporting",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Aurier").set({
-		    Assistências: 1,
-		    Gols: 0,
-		    Nome: "Serge AURIER",
-		    Posição: "ld",
-		    Clube: "Sporting",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Pope").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Nick POPE",
-		    Posição: "gol",
-		    Clube: "Sporting",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Sporting/DadosJogadores/Foster").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Ben FOSTER",
-		    Posição: "gol",
-		    Clube: "Sporting",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		/*----City------------------------------------------------------------------------------*/
-
-		firestore.doc("Clube/City").set({
-		    Vitórias: 24,
-		    Empates: 6,
-		    Derrotas: 10,
-		    Jogos: 40,
-		    GolsPró: 88,
-		    GolsContra: 55,
-		    ClassificaçãoaGeral: "3º",
-		    PontosPrioridadeContratação: 1,
-		    PontosClassificaçãoGeral: 2,
-		    NomeClube: "Manchester City",
-		    Moedas: "0 c"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Richarlison").set({
-		    Assistências: 4,
-		    Gols: 7,
-		    Nome: "RICHARLISON de Andrade",
-		    Posição: "ata",
-		    Clube: "Manchester City",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Mané").set({
-		    Assistências: 1,
-		    Gols: 2,
-		    Nome: "Sadio MANÉ",
-		    Posição: "pe",
-		    Clube: "Manchester City",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Lautaro").set({
-		    Assistências: 3,
-		    Gols: 9,
-		    Nome: "LAUTARO Marténez",
-		    Posição: "ata",
-		    Clube: "Manchester City",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Ronaldo").set({
-		    Assistências: 11,
-		    Gols: 14,
-		    Nome: "Cristiano RONALDO",
-		    Posição: "ata",
-		    Clube: "Manchester City",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Sancho").set({
-		    Assistências: 6,
-		    Gols: 9,
-		    Nome: "Jadon SANCHO",
-		    Posição: "md",
-		    Clube: "Manchester City",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Çalhanoglu").set({
-		    Assistências: 8,
-		    Gols: 8,
-		    Nome: "Hakan ÇALHANOGLU",
-		    Posição: "pe",
-		    Clube: "Manchester City",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Bernard").set({
-		    Assistências: 4,
-		    Gols: 3,
-		    Nome: "BERNARD Anício",
-		    Posição: "me",
-		    Clube: "Manchester City",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Valverde").set({
-		    Assistências: 1,
 		    Gols: 1,
-		    Nome: "Federico VALVERDE",
-		    Posição: "mc",
-		    Clube: "Manchester City",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Tielemans").set({
-		    Assistências: 6,
-		    Gols: 7,
-		    Nome: "Youri TIELEMANS",
-		    Posição: "mc",
-		    Clube: "Manchester City",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Can").set({
-		    Assistências: 7,
-		    Gols: 0,
-		    Nome: "Emre CAN",
-		    Posição: "mc",
-		    Clube: "Manchester City",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Dier").set({
-		    Assistências: 2,
-		    Gols: 2,
-		    Nome: "Eric DIER",
+		    Nome: "Lucas Leiva",
 		    Posição: "vol",
-		    Clube: "Manchester City",
+		    Clube: "Sport",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -2363,319 +1810,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/City/DadosJogadores/Casemiro").set({
+		firestore.doc("Jogadores/Sport/DadosJogadores/Ceballos").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Carlos H. V. CASEMIRO",
-		    Posição: "vol",
-		    Clube: "Manchester City",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Telles").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Alex TELLES",
-		    Posição: "le",
-		    Clube: "Manchester City",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Pereira").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Ricardo PEREIRA",
-		    Posição: "ld",
-		    Clube: "Manchester City",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Davies").set({
-		    Assistências: 1,
-		    Gols: 1,
-		    Nome: "Ben DAVIES",
-		    Posição: "le",
-		    Clube: "Manchester City",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Bellerín").set({
-		    Assistências: 1,
-		    Gols: 0,
-		    Nome: "Hector BELLERÍN",
-		    Posição: "ld",
-		    Clube: "Manchester City",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Chilwell").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Ben CHILWEL",
-		    Posição: "le",
-		    Clube: "Manchester City",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Konate").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Ibrahima KONATÉ",
-		    Posição: "zag",
-		    Clube: "Manchester City",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Manolas").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Kostas MANOLAS",
-		    Posição: "zag",
-		    Clube: "Manchester City",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Gomez").set({
-		    Assistências: 0,
-		    Gols: 2,
-		    Nome: "Joe GOMEZ",
-		    Posição: "zag",
-		    Clube: "Manchester City",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Dlopez").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Diego LOPEZ",
-		    Posição: "gol",
-		    Clube: "Manchester City",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/City/DadosJogadores/Meret").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Alex MERET",
-		    Posição: "gol",
-		    Clube: "Manchester City",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		/*----Madrid------------------------------------------------------------------------------*/
-
-		firestore.doc("Clube/Madrid").set({
-		    Vitórias: 3,
-		    Empates: 0,
-		    Derrotas: 1,
-		    Jogos: 4,
-		    GolsPró: 7,
-		    GolsContra: 3,
-		    ClassificaçãoaGeral: "8º",
-		    PontosPrioridadeContratação: 0,
-		    PontosClassificaçãoGeral: 0,
-		    NomeClube: "Real Madrid",
-		    Moedas: "0 c"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Hazard").set({
-		    Assistências: 1,
-		    Gols: 4,
-		    Nome: "Eden HAZARD",
-		    Posição: "pe",
-		    Clube: "Real Madrid",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Eder").set({
-		    Assistências: 0,
-		    Gols: 1,
-		    Nome: "ÉDER Citadin",
-		    Posição: "ata",
-		    Clube: "Real Madrid",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Januzaj").set({
-		    Assistências: 1,
-		    Gols: 0,
-		    Nome: "Adnan JANUZAJ",
-		    Posição: "pd",
-		    Clube: "Real Madrid",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Gignac").set({
-		    Assistências: 0,
-		    Gols: 1,
-		    Nome: "André Pierre GIGNAC",
-		    Posição: "ata",
-		    Clube: "Real Madrid",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Sisto").set({
-		    Assistências: 1,
-		    Gols: 1,
-		    Nome: "Pione SISTO",
-		    Posição: "pe",
-		    Clube: "Real Madrid",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Berghuis").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Steven BERGHUIS",
-		    Posição: "pd",
-		    Clube: "Real Madrid",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Trossard").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Leandro TROSSARD",
-		    Posição: "me",
-		    Clube: "Real Madrid",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Bacca").set({
-		    Assistências: 1,
-		    Gols: 1,
-		    Nome: "Carlos BACCA",
-		    Posição: "ata",
-		    Clube: "Real Madrid",
-		    Setor: "ata"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Coutinho").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Fhilippe COUTINHO",
+		    Nome: "Dani Ceballos",
 		    Posição: "mei",
-		    Clube: "Real Madrid",
+		    Clube: "Sport",
 		    Setor: "mei"
 		})
 		.then(function() {
@@ -2685,87 +1825,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Sanson").set({
+		firestore.doc("Jogadores/Sport/DadosJogadores/Moura").set({
 		    Assistências: 0,
 		    Gols: 1,
-		    Nome: "Morgan SANSON",
-		    Posição: "mc",
-		    Clube: "Real Madrid",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Seri").set({
-		    Assistências: 1,
-		    Gols: 0,
-		    Nome: "Jean Michaël SERI",
-		    Posição: "mc",
-		    Clube: "Real Madrid",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Merino").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Mikel MERINO",
-		    Posição: "mc",
-		    Clube: "Real Madrid",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Rongier").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Valentin RONGIER",
-		    Posição: "mc",
-		    Clube: "Real Madrid",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Mascherano").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Javier MASCHERANO",
-		    Posição: "vol",
-		    Clube: "Real Madrid",
-		    Setor: "mei"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Jahanbakhsh").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Alireza Jahanbakhsh",
+		    Nome: "Lucas Moura",
 		    Posição: "pd",
-		    Clube: "Real Madrid",
+		    Clube: "Sport",
 		    Setor: "ata"
 		})
 		.then(function() {
@@ -2775,13 +1840,738 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Escudero").set({
+		firestore.doc("Jogadores/Sport/DadosJogadores/Maddison").set({
+		    Assistências: 1,
+		    Gols: 0,
+		    Nome: "James Maddison",
+		    Posição: "mei",
+		    Clube: "Sport",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Özil").set({
+		    Assistências: 1,
+		    Gols: 1,
+		    Nome: "Mesut Özil",
+		    Posição: "mei",
+		    Clube: "Sport",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Martial").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Sergio ESCUDERO",
-		    Posição: "le",
-		    Clube: "Real Madrid",
+		    Nome: "Anthony Martial",
+		    Posição: "ata",
+		    Clube: "Sport",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Giroud").set({
+		    Assistências: 0,
+		    Gols: 2,
+		    Nome: "Olivier Giroud",
+		    Posição: "ata",
+		    Clube: "Sport",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Sport/DadosJogadores/Messi").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Lionel Messi",
+		    Posição: "pd",
+		    Clube: "Sport",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		/*----Internacional------------------------------------------------------------------------------*/
+
+		firestore.doc("Clube/Internacional").set({
+		    Vitórias: 3,
+		    Empates: 6,
+		    Derrotas: 1,
+		    Jogos: 10,
+		    GolsPró: 15,
+		    GolsContra: 13,
+		    PontosClassificaçãoGeral: 0,
+		    NomeClube: "Internacional",
+		    ArtilheiroImg: "",
+		    CraqueImg: "",
+		    Escalação: "",
+		    BronzeStar: 0,
+		    SilverStar: 0,
+		    GoldStar: 0
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Son").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Heung-min Son",
+		    Posição: "me",
+		    Clube: "Internacional",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Schmeichel").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Kasper Schmeichel",
+		    Posição: "gol",
+		    Clube: "Internacional",
 		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Rguerreiro").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Raphaël Guerreiro",
+		    Posição: "gol",
+		    Clube: "Internacional",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Bissaka").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Aron Wan-Bissaka",
+		    Posição: "ld",
+		    Clube: "Internacional",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Telles").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Alex Telles",
+		    Posição: "le",
+		    Clube: "Internacional",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Rudiger").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Antonio Rüdiger",
+		    Posição: "zag",
+		    Clube: "Internacional",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Djene").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Djene Dakonam",
+		    Posição: "zag",
+		    Clube: "Internacional",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Asensio").set({
+		    Assistências: 0,
+		    Gols: 3,
+		    Nome: "Marco Asensio",
+		    Posição: "me",
+		    Clube: "Internacional",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Thauvin").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Florian Thauvin",
+		    Posição: "pd",
+		    Clube: "Internacional",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Musso").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Juan Musso",
+		    Posição: "gol",
+		    Clube: "Internacional",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Dcarlos").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Diego Carlos",
+		    Posição: "zag",
+		    Clube: "Internacional",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Gueye").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Gana Gueye",
+		    Posição: "mc",
+		    Clube: "Internacional",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Pizzi").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Luís Miguel(Pizzi)",
+		    Posição: "md",
+		    Clube: "Internacional",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Stepanenko").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Taras Stepanenko",
+		    Posição: "vol",
+		    Clube: "Internacional",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Milik").set({
+		    Assistências: 4,
+		    Gols: 2,
+		    Nome: "Arkadiusz Milik",
+		    Posição: "ata",
+		    Clube: "Internacional",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Falcao").set({
+		    Assistências: 0,
+		    Gols: 3,
+		    Nome: "Falcao García",
+		    Posição: "ata",
+		    Clube: "Internacional",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Wilson").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Callum Wilson",
+		    Posição: "ata",
+		    Clube: "Internacional",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Rodrigo").set({
+		    Assistências: 1,
+		    Gols: 2,
+		    Nome: "Rodrigo Moreno",
+		    Posição: "ata",
+		    Clube: "Internacional",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Depaul").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Rodrigo De Paul",
+		    Posição: "mc",
+		    Clube: "Internacional",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Fernando").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Fernando Lucas",
+		    Posição: "vol",
+		    Clube: "Internacional",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Blind").set({
+		    Assistências: 0,
+		    Gols: 1,
+		    Nome: "Daley Blind",
+		    Posição: "zag",
+		    Clube: "Internacional",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Dilorenzo").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Giovanni Di Lorenzo",
+		    Posição: "ld",
+		    Clube: "Internacional",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Digne").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Lucas Digne",
+		    Posição: "le",
+		    Clube: "Internacional",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Internacional/DadosJogadores/Neymar").set({
+		    Assistências: 2,
+		    Gols: 0,
+		    Nome: "Neymar JR",
+		    Posição: "pe",
+		    Clube: "Internacional",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		/*----Flamengo------------------------------------------------------------------------------*/
+
+		firestore.doc("Clube/Flamengo").set({
+		    Vitórias: 1,
+		    Empates: 1,
+		    Derrotas: 4,
+		    Jogos: 6,
+		    GolsPró: 2,
+		    GolsContra: 8,
+		    PontosClassificaçãoGeral: 0,
+		    NomeClube: "Flamengo",
+		    ArtilheiroImg: "",
+		    CraqueImg: "",
+		    Escalação: "",
+		    BronzeStar: 0,
+		    SilverStar: 0,
+		    GoldStar: 0
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Kimmich").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Joshua Kimmich",
+		    Posição: "vol",
+		    Clube: "Flamengo",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Perisic").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Ivan Perisic",
+		    Posição: "pe",
+		    Clube: "Flamengo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Rodrygo").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Rodrygo Silva",
+		    Posição: "pd",
+		    Clube: "Flamengo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Vidal").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Arturo Vidal",
+		    Posição: "mc",
+		    Clube: "Flamengo",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Tripier").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Kieran Tripier",
+		    Posição: "ld",
+		    Clube: "Flamengo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Filipeluís").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Filipe Luís",
+		    Posição: "le",
+		    Clube: "Flamengo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/FMendy").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Ferland Mendy",
+		    Posição: "le",
+		    Clube: "Flamengo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Muslera").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Fernando Muslera",
+		    Posição: "gol",
+		    Clube: "Flamengo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Diegoalves").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Diego Alves",
+		    Posição: "gol",
+		    Clube: "Flamengo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Arrascaeta").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Giorgian De Arrascaeta",
+		    Posição: "mei",
+		    Clube: "Flamengo",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Mctominay").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Scott McTominay",
+		    Posição: "mc",
+		    Clube: "Flamengo",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/BH").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Bruno Henrique",
+		    Posição: "pe",
+		    Clube: "Flamengo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Mendes").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Thiao Mendes",
+		    Posição: "mc",
+		    Clube: "Flamengo",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Davidluiz").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "David Luíz",
+		    Posição: "zag",
+		    Clube: "Flamengo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Florenzi").set({
+		    Assistências: 0,
+		    Gols: 1,
+		    Nome: "Alessandro Florenzi",
+		    Posição: "ld",
+		    Clube: "Flamengo",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Vinijunior").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Vini Júnior",
+		    Posição: "pe",
+		    Clube: "Flamengo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Xhaka").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Granit Xhaka",
+		    Posição: "vol",
+		    Clube: "Flamengo",
+		    Setor: "mei"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -2790,27 +2580,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});		
 
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Criscito").set({
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Boateng").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Domenico CRISCITO",
-		    Posição: "le",
-		    Clube: "Real Madrid",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Vida").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "Domagoj VIDA",
+		    Nome: "Jerome Boateng",
 		    Posição: "zag",
-		    Clube: "Real Madrid",
+		    Clube: "Flamengo",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -2820,27 +2595,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Odriozola").set({
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Godin").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Álvaro ODRIOZOLA",
-		    Posição: "ld",
-		    Clube: "Real Madrid",
-		    Setor: "zag"
-		})
-		.then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.error("Error writing document: ", error);
-		});
-
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Fonte").set({
-		    Assistências: 0,
-		    Gols: 0,
-		    Nome: "José FONTE",
+		    Nome: "Diego Godín",
 		    Posição: "zag",
-		    Clube: "Real Madrid",
+		    Clube: "Flamengo",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -2848,15 +2608,15 @@ function PovoaçãoInicialBD(){
 		})
 		.catch(function(error) {
 		    console.error("Error writing document: ", error);
-		});	
+		});
 
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Dias").set({
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Ibrah").set({
 		    Assistências: 0,
 		    Gols: 1,
-		    Nome: "Ruben DIAS",
-		    Posição: "zag",
-		    Clube: "Real Madrid",
-		    Setor: "zag"
+		    Nome: "Zlatan Ibrahimovic",
+		    Posição: "ata",
+		    Clube: "Flamengo",
+		    Setor: "ata"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -2865,13 +2625,13 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});
 
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Moyà").set({
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Draxler").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "Miguel Ángel MOYÀ",
-		    Posição: "gol",
-		    Clube: "Real Madrid",
-		    Setor: "zag"
+		    Nome: "Julian Draxler",
+		    Posição: "mc",
+		    Clube: "Flamengo",
+		    Setor: "mei"
 		})
 		.then(function() {
 		    console.log("Document successfully written!");
@@ -2880,12 +2640,12 @@ function PovoaçãoInicialBD(){
 		    console.error("Error writing document: ", error);
 		});	
 
-		firestore.doc("Jogadores/Madrid/DadosJogadores/Ederson").set({
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Canales").set({
 		    Assistências: 0,
 		    Gols: 0,
-		    Nome: "EDERSON Santana",
-		    Posição: "gol",
-		    Clube: "Real Madrid",
+		    Nome: "Sergio Canales",
+		    Posição: "zag",
+		    Clube: "Flamengo",
 		    Setor: "zag"
 		})
 		.then(function() {
@@ -2894,7 +2654,808 @@ function PovoaçãoInicialBD(){
 		.catch(function(error) {
 		    console.error("Error writing document: ", error);
 		});
-}
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Chiesa").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Federico Chiesa",
+		    Posição: "pd",
+		    Clube: "Flamengo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});	
+
+		firestore.doc("Jogadores/Flamengo/DadosJogadores/Lewandowski").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Robert Lewandowski",
+		    Posição: "ata",
+		    Clube: "Flamengo",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+
+		/*----Bragantino------------------------------------------------------------------------------*/
+
+		firestore.doc("Clube/Bragantino").set({
+		    Vitórias: 2,
+		    Empates: 2,
+		    Derrotas: 0,
+		    Jogos: 4,
+		    GolsPró: 6,
+		    GolsContra: 3,
+		    PontosClassificaçãoGeral: 1,
+		    NomeClube: "Bragantino",
+		    ArtilheiroImg: "",
+		    CraqueImg: "",
+		    Escalação: "",
+		    BronzeStar: 1,
+		    SilverStar: 0,
+		    GoldStar: 0
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Auba").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Pierre-Emerick Aubameyang",
+		    Posição: "ata",
+		    Clube: "Bragantino",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Hradecky").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Lukás Hrádecký",
+		    Posição: "gol",
+		    Clube: "Bragantino",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Pickford").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Jordan Pickford",
+		    Posição: "gol",
+		    Clube: "Bragantino",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Lindelof").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Victor Lindelof",
+		    Posição: "zag",
+		    Clube: "Bragantino",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Stones").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "John Stones",
+		    Posição: "zag",
+		    Clube: "Bragantino",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Imartínez").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Íñigo Martínez",
+		    Posição: "zag",
+		    Clube: "Bragantino",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Gabriel").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Gabriel Costa",
+		    Posição: "zag",
+		    Clube: "Bragantino",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Kolarov").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Aleksandar Kolarov",
+		    Posição: "le",
+		    Clube: "Bragantino",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Gayá").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "José Gayá",
+		    Posição: "le",
+		    Clube: "Bragantino",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Meunier").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Thomas Meunier",
+		    Posição: "ld",
+		    Clube: "Bragantino",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Corona").set({
+		    Assistências: 0,
+		    Gols: 1,
+		    Nome: "Jesús Corona",
+		    Posição: "ld",
+		    Clube: "Bragantino",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Coquelin").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Francis Coquelin",
+		    Posição: "vol",
+		    Clube: "Bragantino",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Williamcarvalho").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "William Carvalho",
+		    Posição: "vol",
+		    Clube: "Bragantino",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Ramsey").set({
+		    Assistências: 2,
+		    Gols: 0,
+		    Nome: "Aaron Ramsey",
+		    Posição: "mc",
+		    Clube: "Bragantino",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Tielemans").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Youri Tielemans",
+		    Posição: "mc",
+		    Clube: "Bragantino",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Llorente").set({
+		    Assistências: 0,
+		    Gols: 1,
+		    Nome: "Marcos Llorente",
+		    Posição: "mei",
+		    Clube: "Bragantino",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Mkhitaryan").set({
+		    Assistências: 0,
+		    Gols: 1,
+		    Nome: "Henrikh Mikhtaryan",
+		    Posição: "md",
+		    Clube: "Bragantino",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});		
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Promes").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Quincy Promes",
+		    Posição: "pe",
+		    Clube: "Bragantino",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Guedes").set({
+		    Assistências: 0,
+		    Gols: 1,
+		    Nome: "Gonçalo Guedes",
+		    Posição: "pe",
+		    Clube: "Bragantino",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Politano").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Matteo Politano",
+		    Posição: "pd",
+		    Clube: "Bragantino",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Volland").set({
+		    Assistências: 1,
+		    Gols: 0,
+		    Nome: "Kevin Volland",
+		    Posição: "ata",
+		    Clube: "Bragantino",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});	
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Mandzukic").set({
+		    Assistências: 1,
+		    Gols: 2,
+		    Nome: "Mario Mandzukic",
+		    Posição: "ata",
+		    Clube: "Bragantino",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Berghuis").set({
+		    Assistências: 0,
+		    Gols: 1,
+		    Nome: "Stevan Berghuis",
+		    Posição: "pd",
+		    Clube: "Bragantino",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Bragantino/DadosJogadores/Vandijk").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Virgil Van Dijk",
+		    Posição: "zag",
+		    Clube: "Bragantino",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		/*----Gremio------------------------------------------------------------------------------*/
+
+		firestore.doc("Clube/Gremio").set({
+		    Vitórias: 1,
+		    Empates: 1,
+		    Derrotas: 2,
+		    Jogos: 4,
+		    GolsPró: 5,
+		    GolsContra: 6,
+		    PontosClassificaçãoGeral: 4,
+		    NomeClube: "Gremio",
+		    ArtilheiroImg: "",
+		    CraqueImg: "",
+		    Escalação: "",
+		    BronzeStar: 0,
+		    SilverStar: 0,
+		    GoldStar: 1
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Ramos").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Sérgio Ramos",
+		    Posição: "zag",
+		    Clube: "Gremio",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Strakosha").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Thomas Strakosha",
+		    Posição: "gol",
+		    Clube: "Gremio",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Ospina").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "David Ospina",
+		    Posição: "gol",
+		    Clube: "Gremio",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Maksimović").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Nikola Maksimović",
+		    Posição: "zag",
+		    Clube: "Gremio",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Christensen").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Andreas Christensen",
+		    Posição: "zag",
+		    Clube: "Gremio",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Zouma").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Kurt Zouma",
+		    Posição: "zag",
+		    Clube: "Gremio",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/PEPE").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Képler Laveran(PEPE)",
+		    Posição: "zag",
+		    Clube: "Gremio",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Alonso").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Marcos Alonso",
+		    Posição: "le",
+		    Clube: "Gremio",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Ismaily").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Ismaily Gonçalves",
+		    Posição: "le",
+		    Clube: "Gremio",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/SergiRoberto").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Sergi Roberto",
+		    Posição: "ld",
+		    Clube: "Gremio",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/JesusNavas").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Jesús Navas",
+		    Posição: "ld",
+		    Clube: "Gremio",
+		    Setor: "zag"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Félix").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "João Félix",
+		    Posição: "sa",
+		    Clube: "Gremio",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Weigl").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Julian Weigl",
+		    Posição: "vol",
+		    Clube: "Gremio",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Zieliński").set({
+		    Assistências: 1,
+		    Gols: 0,
+		    Nome: "Piotr Zieliński",
+		    Posição: "mc",
+		    Clube: "Gremio",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Valverde").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Federico Valverde",
+		    Posição: "mc",
+		    Clube: "Gremio",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Çalhanoğlu").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Hakan Çalhanoğlu",
+		    Posição: "mei",
+		    Clube: "Gremio",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Mount").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Mason Mount",
+		    Posição: "md",
+		    Clube: "Gremio",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});		
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Bergwijn").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Steven Bergwijn",
+		    Posição: "pe",
+		    Clube: "Gremio",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/RafaSilva").set({
+		    Assistências: 1,
+		    Gols: 1,
+		    Nome: "Rafa Silva",
+		    Posição: "pe",
+		    Clube: "Gremio",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/GelsonMartins").set({
+		    Assistências: 0,
+		    Gols: 1,
+		    Nome: "Gelson Martins",
+		    Posição: "pd",
+		    Clube: "Gremio",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Esalvio").set({
+		    Assistências: 0,
+		    Gols: 1,
+		    Nome: "Eduardo Salvio",
+		    Posição: "ata",
+		    Clube: "Gremio",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});	
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/AlexisSanchez").set({
+		    Assistências: 1,
+		    Gols: 3,
+		    Nome: "Alexis Sánchez",
+		    Posição: "ata",
+		    Clube: "Gremio",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/Haller").set({
+		    Assistências: 0,
+		    Gols: 0,
+		    Nome: "Sébastien Haller",
+		    Posição: "pd",
+		    Clube: "Gremio",
+		    Setor: "ata"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
+		firestore.doc("Jogadores/Gremio/DadosJogadores/DeBruyne").set({
+		    Assistências: 2,
+		    Gols: 1,
+		    Nome: "Kevin De Bruyne",
+		    Posição: "mei",
+		    Clube: "Gremio",
+		    Setor: "mei"
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+};
 		
 		
 		

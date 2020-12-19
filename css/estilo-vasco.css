@@ -1,0 +1,175 @@
+/*Página Vasco*/
+*{
+	border-radius: 5px;
+}
+
+@font-face {
+	font-family: sce;
+	src: url(../Assets/font/sce.ttf);
+}
+
+table {
+	width: 100%;
+	font-family: sce;
+	margin-left: 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+table, th, td {
+}
+th, td {
+	padding: 15px;
+	text-align: center;
+}
+
+.POS{
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.linhas:hover {
+	color: white;
+	background-color: black;
+}
+
+.coluna:hover{
+	color: rgb(28,28,28);
+	background-color: gray;
+}
+
+tr {
+	background-color: rgb(28,28,28);
+	color: gray;
+}
+
+th {
+	background-color: rgb(28,28,28);
+	color: gray;
+}
+
+header{
+	margin-top: 1%;
+	background-image:url(../Assets/Fundo/fundoVasco.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover; 
+	height:300px;
+}
+
+h1{
+	margin-bottom: 1%;
+	font-family: sce;
+	color: white;
+	font-size: 40px;
+	width: 100%;
+	background-color: black;
+}
+
+.vasco-escudo{
+	margin-left: 2%;
+	margin-top: 2%;
+	width: 150px;
+	float: left;
+	position: relative;
+}
+
+body{
+	background-image:url(../Assets/Fundo/fundo.jpg);
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 87%;
+	margin: auto;
+	color: white;
+	font-family: Consolas;
+}
+
+nav{
+	text-align: center;
+	background-color: black;
+	margin-top: 5px;
+	margin-bottom: 5px; 
+	height: 40px;
+	padding-top: 20px;
+}
+
+.vasco-menu{
+	padding: 1%;
+	margin: 1%;
+	text-decoration: none;
+	color: gray;
+	font-weight: bold;
+	background-color: rgb(28,28,28);
+	box-shadow:0px 5px 10px gray;
+	font-family: sce;
+}
+
+.vasco-menu:hover{
+	background-color: black;
+	color: white;
+}
+
+section{
+	background-color: black;
+	height: 100%;
+	display: flex;
+}
+
+.KDA{
+	float: right;
+	color: black;
+	margin-top: 15px;
+	margin-right: 5px;
+	width: 60%;
+	position: relative;
+}
+
+.qntdMoedas{
+	font-weight: bold;
+	font-size: 15px;
+	background-color: rgb(28,28,28);
+	color: gray;
+	padding: 10px;
+	margin-right: 5px;
+	width: 25%;
+	float: right;
+}
+
+h2{
+	font-weight: bold;
+	background-color: rgb(28,28,28);
+	color: gray;
+	padding: 20px;
+	margin-top: 20px;
+	width: 260px;
+	margin-left: 80px;
+}
+
+.squad{
+	width: 90%;
+	padding: 3px;
+}
+
+.destaque{
+	font-weight: bold;
+	font-size: 15px;
+	background-color: rgb(28,28,28);
+	width: 40%;
+	color: gray;
+	padding: 10px;
+}
+.destaque-img{
+	font-weight: bold;
+	font-size: 15px;
+	width: 90%;
+	padding: 3px;
+}
+
+footer{
+	background-color: black;
+	margin-top: 8px;
+	height: 20px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
