@@ -18,6 +18,12 @@ th, td {
 	text-align: center;
 }
 
+.POS{
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
 .linhas:hover {
 	color: rgb(230,230,230);
 	background-color: rgb(175,0,0);
@@ -149,7 +155,6 @@ h2{
 .destaque-img{
 	font-weight: bold;
 	font-size: 15px;
-	width: 90%;
 	padding: 3px;
 }
 
